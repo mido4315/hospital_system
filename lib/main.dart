@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'features/attendance and leaving/Presentation/Views/Widgets/home.dart';
 import 'features/splash/presentation/views/splash_view.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashView(),
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
     );
   }
 }
