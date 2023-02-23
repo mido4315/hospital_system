@@ -1,8 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import '../core/constant/color.dart';
 import '../core/constant/imgeassets.dart';
 import '../core/constant/style.dart';

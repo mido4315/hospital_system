@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:untitled14/core/constant/style.dart';
-import 'package:untitled14/widget/Type_task.dart';
-import 'package:untitled14/widget/calander_widget.dart';
+
 
 import '../../../../core/constant/color.dart';
+import '../../../../core/constant/style.dart';
+import '../../../../widget/Type_task.dart';
+import '../../../../widget/calander_widget.dart';
 
 class task_view extends StatefulWidget {
   const task_view({Key? key}) : super(key: key);
