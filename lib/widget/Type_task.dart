@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../core/constant/color.dart';
+import '../core/constant/imgeassets.dart';
 import '../core/constant/style.dart';
 
 Widget Type_task(TextStyle style,Color color,nameTask,data,type,nameType)
@@ -26,7 +27,7 @@ Widget Type_task(TextStyle style,Color color,nameTask,data,type,nameType)
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Image.asset("assets/tasks/Group 4693.png"),
+                      child: Image.asset(ImageAssets.calander),
                     ),
                      Text("$nameTask",style: Style.style3,)
                ],),
@@ -43,7 +44,7 @@ Widget Type_task(TextStyle style,Color color,nameTask,data,type,nameType)
             Row(children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.asset("assets/tasks/Group 4692.png"),
+                child: Image.asset(ImageAssets.finshed),
               ),
                Text("$data",style: Style.style3)
             ],),
