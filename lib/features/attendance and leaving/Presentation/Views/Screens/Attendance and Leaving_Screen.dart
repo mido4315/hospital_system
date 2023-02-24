@@ -34,7 +34,7 @@ class AttendanceandLeaving extends StatelessWidget {
               ContainerBox(
                 width: width,
                 height: height,
-                iconData: Icons.cabin,
+                iconData: Icons.close_outlined,
                 title: 'Leaving',
                 subtitle: '04 : 00 pm',
                 color: Colors.deepOrange,

@@ -29,7 +29,7 @@ class _FingerPrintState extends State<FingerPrint> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(70, 0, 0, 0),
+      padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
       child: Column(
         children: [
           Container(
