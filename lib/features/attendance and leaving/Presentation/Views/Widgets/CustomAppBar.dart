@@ -8,7 +8,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
         child: CircleAvatar(
           child: Image.asset('images/FingerPrint/MaskGroup2.png'),
         ),
