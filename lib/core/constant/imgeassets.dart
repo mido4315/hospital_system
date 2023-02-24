@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 class ImageAssets{
- static const String imageRoot = 'Assets/tasks';
+ static const String imageRoot = 'assets/tasks';
  static const String SignInRoot= 'assets/Sign_In';
 
 
