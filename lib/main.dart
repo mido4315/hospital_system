@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
 import 'package:hospital_system/features/profile/presentation/views/profile.dart';
-import 'features/splash/presentation/views/splash_view.dart';
 import 'features/profile/presentation/views/profile.dart';
+import 'features/splash - prototype map/presentation/views/splash_view.dart';
+import 'features/tasks/presentation/views/task_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xff22C7B8),
+        primaryColor: const Color(0xff22C7B8),
         fontFamily: 'Poppins'
       ),
-      home: const AttendanceandLeaving(),
+      home: const SplashView(),
     );
   }
 }

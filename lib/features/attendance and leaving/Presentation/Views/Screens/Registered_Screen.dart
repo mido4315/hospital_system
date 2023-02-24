@@ -8,7 +8,7 @@ class Registered extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: Color(0xFF22C7B8),
+        backgroundColor: const Color(0xFF22C7B8),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,15 +28,15 @@ class Registered extends StatelessWidget {
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                  color: Color(0xFFffffff), width: 2)),
-                          child: CircleAvatar(
+                                  color: const Color(0xFFffffff), width: 2)),
+                          child: const CircleAvatar(
                             backgroundColor: Colors.transparent,
                             child: Icon(Icons.check,size: 120,color: Color(0xFFffffff),),
                             radius: 100,
                           ),
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Your attendance has been registered',
                         style: TextStyle(
                             color: Color(0xFFffffff),
@@ -50,7 +50,7 @@ class Registered extends StatelessWidget {
               // Container(
               //   child: Image.asset('images/FingerPrint/CompositeLayer.png',),
               // ),
-              SizedBox(
+              const SizedBox(
                 height: 200,
               ),
 
@@ -58,8 +58,8 @@ class Registered extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xFFffffff), width: 2)),
-                child: CircleAvatar(
+                    border: Border.all(color: const Color(0xFFffffff), width: 2)),
+                child: const CircleAvatar(
                   backgroundColor: Colors.transparent,
                   child: Icon(
                     Icons.arrow_right_alt,
