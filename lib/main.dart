@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'features/attendance and leaving/Presentation/Views/Widgets/home.dart';
+import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
+import 'features/attendance and leaving/Presentation/Views/Screens/TouchID_Sensor_Screen.dart';
 import 'features/splash/presentation/views/splash_view.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const AttendanceandLeaving(),
     );
   }
 }

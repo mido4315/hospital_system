@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Widgets/Finger_Print.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class TouchIDSensor extends StatelessWidget {
+  const TouchIDSensor({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

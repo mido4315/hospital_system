@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Widgets/Registered.dart';
+import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Registered_Screen.dart';
 import 'package:local_auth/local_auth.dart';
 
 class FingerPrint extends StatefulWidget {
