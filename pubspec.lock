@@ -108,7 +108,7 @@ packages:
     source: hosted
     version: "2.0.1"
   local_auth:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: local_auth
       sha256: "1625a217c599db02044df992509eb52584cfdaa8219958d516b74f644ef2c626"
@@ -249,5 +249,5 @@ packages:
     source: hosted
     version: "2.1.4"
 sdks:
-  dart: ">=2.19.2 <3.0.0"
+  dart: ">=2.18.5 <3.0.0"
   flutter: ">=3.0.0"
