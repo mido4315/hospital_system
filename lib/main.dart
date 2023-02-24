@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_system/core/constant/color.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
 import 'package:hospital_system/features/profile/presentation/views/profile.dart';
 import 'features/sign In/presentation/views/SginIn.dart';
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Hospital System',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: const Color(0xff22C7B8),
         primaryColor: ConstantColor.green_white,
         fontFamily: 'Poppins'
       ),

@@ -5,13 +5,13 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color(0xff22C7B8),
+      backgroundColor:const Color(0xff22C7B8),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('My Profile',style: TextStyle(color: Colors.white),),
+        title: const Text('My Profile',style: TextStyle(color: Colors.white),),
         centerTitle: true,
-        leading: IconButton(onPressed: (){},icon: Icon(Icons.arrow_back,)),
+        leading: IconButton(onPressed: (){},icon: const Icon(Icons.arrow_back,)),
 
       ),
       body: SingleChildScrollView(
@@ -33,13 +33,13 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 60),
                   child: Column(
                     children: [
-                      Center(
+                      const Center(
                         child: Text('Ebrahem ElZainy',style: TextStyle(color: Color(0xff22C7B8)),),
                       ),
-                      CustomTile(icon: Icon(Icons.medical_services_outlined,color: Color(0xff22C7B8),),tile: 'Specialist - Doctor',),
+                      CustomTile(icon: const Icon(Icons.medical_services_outlined,color: Color(0xff22C7B8),),tile: 'Specialist - Doctor',),
                       CustomTile(icon: Image.asset('assets/profile_screen/gender.png',scale: 3,),tile: 'Male',),
-                      CustomTile(icon: Icon(Icons.calendar_month,color: Color(0xff22C7B8),),tile: '29-03-1997',),
-                      CustomTile(icon: Icon(Icons.location_on_outlined,color: Color(0xff22C7B8),), tile: 'Mansoura,Shirben'),
+                      CustomTile(icon: const Icon(Icons.calendar_month,color: Color(0xff22C7B8),),tile: '29-03-1997',),
+                      CustomTile(icon: const Icon(Icons.location_on_outlined,color: Color(0xff22C7B8),), tile: 'Mansoura,Shirben'),
                       CustomTile(icon: Image.asset('assets/profile_screen/heart.png',scale: 3,),tile: 'Single',),
                       CustomTile(icon: Image.asset('assets/profile_screen/message.png',scale:3,), tile: 'ebrahemelzainey@gmail.com'),
                       CustomTile(icon: Image.asset('assets/profile_screen/phone.png',scale:3,), tile: '096521145523'),
@@ -57,7 +57,7 @@ class Profile extends StatelessWidget {
                     width: 130,
                     height: 130,
                     decoration: BoxDecoration(
-                      border: Border.all(width: 4,color: Color(0xff22C7B8)),
+                      border: Border.all(width: 4,color: const Color(0xff22C7B8)),
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
@@ -101,7 +101,7 @@ CustomTile({
         height: 35,
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: Color(0xff22C7B8).withOpacity(0.2),
+          color: const Color(0xff22C7B8).withOpacity(0.2),
           borderRadius: BorderRadius.circular(8)
         ),
         child: icon,
