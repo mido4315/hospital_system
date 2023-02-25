@@ -50,31 +50,53 @@ class _SignInState extends State<SignIn> {
                   Text(
                     'Welcome back !',
                     style: TextStyle(
-                        fontSize: 26, color: ConstantColor.green_white),
+                        fontSize: 26, color: ConstantColor.lightGreen),
                   ),
                   Text('data'),
-                  Form(
-                    key: formKey,
-                    child: Column(
-                      children: [
-                        TextFormField(
-                          controller: emailController,
-                          decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.local_phone_outlined,color: ConstantColor.green_white,),
-                            // prefix: Icon(
-                            //   Icons.local_phone_outlined,
-                            //   color: ConstantColor.green_white,
-                            // ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Form(
+                      key: formKey,
+                      child: Column(
+                        children: [
+                          TextFormField(
+                            controller: emailController,
+                            decoration: InputDecoration(
+                              hintText: 'Phone Number',
+                              hintStyle: TextStyle(
+                                color: Colors.black26
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(
+                                  color: Colors.redAccent
+                                )
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: ConstantColor.lightGreen)
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(
+                                  color: Colors.black26
+                                )
+                              ),
+                              prefixIcon: Icon(
+                                Icons.local_phone_outlined,
+                                color: ConstantColor.lightGreen,
+                              ),
+                            ),
+                            validator: (value) {
+                              if (value!.length < 6)
+                                return null;
+                              else
+                                return 'plz enter your E_Mail';
+                            },
                           ),
-                          validator: (value) {
-                            if (value!.length < 6)
-                              return null;
-                            else
-                              return 'plz enter your E_Mail';
-                          },
-                        ),
-                        TextFormField(),
-                      ],
+                          TextFormField(),
+                        ],
+                      ),
                     ),
                   ),
                   ElevatedButton(
