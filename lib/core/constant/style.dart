@@ -2,17 +2,22 @@ import 'package:flutter/material.dart';
 
 
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'color.dart';
+
+
 class Style {
   static const TextStyle style1 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
-    color: Color(0XFF2c2c2c),
+    color: Color(0xff2c2c2c),
     fontFamily: 'poppins',
   );
   static const TextStyle style2 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w400,
-    color: Color(0XFF343434),
+    color: Color(0xff343434),
     fontFamily: 'poppins',
   );
   static const TextStyle style3 = TextStyle(
@@ -35,13 +40,37 @@ class Style {
     ,
     fontFamily: 'poppins',
   );
-  static  TextStyle style5 = const TextStyle(
+  static  TextStyle style5 =  const TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.bold,
-    color: Colors.black,
-    fontFamily: 'Cairo-Black',
+    fontWeight: FontWeight.w500,
+    color: Color(0xff474747),
+    fontFamily: 'poppins',
   );
-
+  static  TextStyle style5_1 =  const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+    fontFamily: 'poppins',
+  );
+  static  TextStyle style5_2 =  const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: Color(0xff22C7B8),
+    fontFamily: 'poppins',
+  );
+  static  TextStyle style5_3 =  const TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w300,
+    color: Color(0xff787878),
+    fontFamily: 'poppins',
+  );
+  static  TextStyle style5_4 =  const TextStyle(
+    height: 1.5,
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+    fontFamily: 'poppins',
+  );
   static OutlineInputBorder  style6 = const OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))) ;
   static ThemeData def = ThemeData(
     textTheme: const TextTheme(
@@ -58,12 +87,12 @@ class Style {
   static ThemeData englishTheme = ThemeData(
     textTheme: const TextTheme(
         headline1: TextStyle(
-      height: 2,
-      fontStyle: FontStyle.italic,
-      fontWeight: FontWeight.bold,
-      color: Colors.pink,
-      fontSize:18,
-    )),
+          height: 2,
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.bold,
+          color: Colors.pink,
+          fontSize:18,
+        )),
     fontFamily: 'PlayfairDisplay',
     backgroundColor: Colors.orange,
     primaryColor: Colors.tealAccent,

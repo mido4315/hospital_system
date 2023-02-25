@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'features/splash/presentation/views/splash_view.dart';
+import 'features/tasks/presentation/views/task_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashView(),
+      home: const task_view()
+      //SplashView(),
     );
   }
 }

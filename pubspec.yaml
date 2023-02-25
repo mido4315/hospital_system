@@ -36,7 +36,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-
+  roundcheckbox:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -64,6 +64,8 @@ flutter:
      - assets/tasks/Group 2879.png
      - assets/tasks/Group 4692.png
      - assets/tasks/Group 4693.png
+     - assets/tasks/Rectangle 1906.png
+     - assets/tasks/NoPath.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
