@@ -32,9 +32,9 @@ class mainPage extends StatelessWidget {
                           MeniContainerLeft: 35,
                           MeniContainerHeight: 100,
                           MeniContainerWidth: 100,
-                          ContainerText: 'Calls',
-                          ConColor: const Color(0xff5F9EDC),
-                          IconImage: 'images/FingerPrint/add.png',
+                          ContainerText: 'Employee',
+                          ConColor: const Color(0xffDC915F),
+                          IconImage: 'images/FingerPrint/Empolyees.png',
                         ),
                         onTap: (){
                           Navigator.of(context).push(

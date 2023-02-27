@@ -11,7 +11,7 @@ class Profile extends StatelessWidget {
         elevation: 0,
         title: const Text('My Profile',style: TextStyle(color: Colors.white),),
         centerTitle: true,
-        leading: IconButton(onPressed: (){},icon: const Icon(Icons.arrow_back,)),
+        leading: IconButton(onPressed: (){Navigator.pop(context);},icon: const Icon(Icons.arrow_back,)),
 
       ),
       body: SingleChildScrollView(
