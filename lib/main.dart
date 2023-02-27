@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hospital_system/core/constant/color.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
 import 'package:hospital_system/features/profile/presentation/views/profile.dart';
+import 'features/HR-Employee/presentation/views/Employee Lists.dart';
 import 'features/HR-Employee/presentation/views/new HR user.dart';
 import 'features/HR-Employee/presentation/views/widget/DropDownButtonCustom.dart';
 import 'features/sign In/presentation/views/SginIn.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         primaryColor: ConstantColor.lightGreen,
         fontFamily: 'Poppins'
       ),
-      home: NewHRuser()
+      home: EmployeeList()
     );
   }
 }
