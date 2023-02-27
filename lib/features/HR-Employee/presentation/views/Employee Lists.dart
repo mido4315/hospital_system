@@ -41,118 +41,121 @@ class _EmployeeListState extends State<EmployeeList>
           },
           child: Icon(Icons.add,color: ConstantColor.white,size: 40,),
         ),
-        body: Stack(
-          children: [
-            const Positioned(
-              left: 0,
-              top: 0,
-              child: Image(
-                image: AssetImage('assets/Sign_In/backimage1.png'),
-              ),
-            ),
-            const Positioned(
-              right: 0,
-              bottom: 0,
-              child: Image(
-                image: AssetImage('assets/Sign_In/backimage2.png'),
-              ),
-            ),
-            Container(
-              height: PageSize.height(context),
-              width: PageSize.width(context),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    height: 10,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Stack(
+              children: [
+                const Positioned(
+                  left: 0,
+                  top: 0,
+                  child: Image(
+                    image: AssetImage('assets/Sign_In/backimage1.png'),
                   ),
-                  Center(
-                    child: Text(
-                      'Employee',
-                      style:
-                          TextStyle(color: ConstantColor.black3, fontSize: 16),
-                    ),
+                ),
+                const Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Image(
+                    image: AssetImage('assets/Sign_In/backimage2.png'),
                   ),
-                  newformFieldCustom(
-                    controller: searchCon,
-                    passmode: false,
-                    errorText: '',
-                    hintText: "Search For Employee",
-                    iconData: Icons.search,
-                  ),
-                  Container(
-                    height: PageSize.height(context) * 0.83,
-                    width: PageSize.width(context),
-                    //color: Colors.blue,
-                    child: Column(
-                      children: [
-                        Container(
-                          height: PageSize.height(context) * 0.05,
-                          width: PageSize.width(context),
-                          color: Colors.white,
-                          child: SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: [
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 0,
-                                  title: 'All',
+                ),
+                Container(
+                  width: PageSize.width(context),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Center(
+                        child: Text(
+                          'Employee',
+                          style:
+                              TextStyle(color: ConstantColor.black3, fontSize: 16),
+                        ),
+                      ),
+                      newformFieldCustom(
+                        controller: searchCon,
+                        passmode: false,
+                        errorText: '',
+                        hintText: "Search For Employee",
+                        iconData: Icons.search,
+                      ),
+                      Container(
+                        height: PageSize.height(context) * 0.83,
+                        width: PageSize.width(context),
+                        //color: Colors.blue,
+                        child: Column(
+                          children: [
+                            Container(
+                              height: PageSize.height(context) * 0.05,
+                              width: PageSize.width(context),
+                              color: Colors.white,
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  children: [
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 0,
+                                      title: 'All',
+                                    ),
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 1,
+                                      title: 'Doctors',
+                                    ),
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 2,
+                                      title: 'Nurse',
+                                    ),
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 3,
+                                      title: "Hr",
+                                    ),
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 4,
+                                      title: 'Receptionist',
+                                    ),
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 5,
+                                      title: 'Manger',
+                                    ),
+                                    ElevatedButtonTabBar(
+                                      TabViewIndex: 6,
+                                      title: 'Analysis Employee',
+                                    ),
+                                  ],
                                 ),
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 1,
-                                  title: 'Doctors',
-                                ),
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 2,
-                                  title: 'Nurse',
-                                ),
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 3,
-                                  title: "Hr",
-                                ),
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 4,
-                                  title: 'Receptionist',
-                                ),
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 5,
-                                  title: 'Manger',
-                                ),
-                                ElevatedButtonTabBar(
-                                  TabViewIndex: 6,
-                                  title: 'Analysis Employee',
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                              height: PageSize.height(context) * 0.73,
+                              width: PageSize.width(context),
+                              //color: Colors.purpleAccent,
+                              child: TabBarView(
+                                controller: tabController,
+                                children: [
+                                  AllTabView(),
+                                  DoctorTabView(),
+                                  NurseTabView(),
+                                  HrTabView(),
+                                  ReceptionlistTabView(),
+                                  MangerTabView(),
+                                  AnalysisTabView(),
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Container(
-                          height: PageSize.height(context) * 0.73,
-                          width: PageSize.width(context),
-                          //color: Colors.purpleAccent,
-                          child: TabBarView(
-                            controller: tabController,
-                            children: [
-                              AllTabView(),
-                              DoctorTabView(),
-                              NurseTabView(),
-                              HrTabView(),
-                              ReceptionlistTabView(),
-                              MangerTabView(),
-                              AnalysisTabView(),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            )
-          ],
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );

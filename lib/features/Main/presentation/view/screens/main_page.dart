@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../../HR-Employee/presentation/views/Employee Lists.dart';
+import '../../../../attendance and leaving/Presentation/Views/Screens/Attendance and Leaving_Screen.dart';
 import '../../../../attendance and leaving/Presentation/Views/Widgets/CustomAppBar.dart';
+import '../../../../tasks/presentation/views/task_view.dart';
 class mainPage extends StatelessWidget {
   const mainPage({Key? key}) : super(key: key);
 
@@ -10,95 +13,109 @@ class mainPage extends StatelessWidget {
 
 
 
-      body: Column(
-        children: [
-          CustomAppBar(),
-          Row(
+      body: SafeArea(
+        child: Column(
+          children: [
+            const CustomAppBar(),
+            Row(
 
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 20,top: 40),
-                child: Column(
-                  children: [
-                    GestureDetector(
-                      child: CustomContainer(
-                        ContainerHeight: 240,
-                        ContainerWidth: 170,
-                        MeniContainerTop: 55,
-                        MeniContainerLeft: 35,
-                        MeniContainerHeight: 100,
-                        MeniContainerWidth: 100,
-                        ContainerText: 'Calls',
-                        ConColor: Color(0xff5F9EDC),
-                        IconImage: 'images/FingerPrint/add.png',
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20,top: 40),
+                  child: Column(
+                    children: [
+                      GestureDetector(
+                        child: CustomContainer(
+                          ContainerHeight: 240,
+                          ContainerWidth: 170,
+                          MeniContainerTop: 55,
+                          MeniContainerLeft: 35,
+                          MeniContainerHeight: 100,
+                          MeniContainerWidth: 100,
+                          ContainerText: 'Calls',
+                          ConColor: const Color(0xff5F9EDC),
+                          IconImage: 'images/FingerPrint/add.png',
+                        ),
+                        onTap: (){
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>  EmployeeList(),
+                            ),
+                          );
+                        },
                       ),
-                      onTap: (){
+                      const SizedBox(height: 20,),
+                      GestureDetector(
+                        onTap: (){
 
-                      },
-                    ),
-                    SizedBox(height: 20,),
-                    GestureDetector(
-                      onTap: (){
-
-                      },
-                      child: CustomContainer(
-                        ContainerHeight: 190,
-                        ContainerWidth: 170,
-                        MeniContainerTop: 38,
-                        MeniContainerLeft: 35,
-                        MeniContainerHeight: 100,
-                        MeniContainerWidth: 100,
-                        ContainerText: 'Reports',
-                        ConColor: Color(0xff915FDC),
-                        IconImage: 'images/FingerPrint/document.png',
+                        },
+                        child: CustomContainer(
+                          ContainerHeight: 190,
+                          ContainerWidth: 170,
+                          MeniContainerTop: 38,
+                          MeniContainerLeft: 35,
+                          MeniContainerHeight: 100,
+                          MeniContainerWidth: 100,
+                          ContainerText: 'Reports',
+                          ConColor: const Color(0xff915FDC),
+                          IconImage: 'images/FingerPrint/document.png',
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20,top: 40),
-                child: Column(
-                  children: [
-                    GestureDetector(
-                      child: CustomContainer(
-                        ContainerHeight: 190,
-                        ContainerWidth: 170,
-                        MeniContainerTop: 38,
-                        MeniContainerLeft: 35,
-                        MeniContainerHeight: 100,
-                        MeniContainerWidth: 100,
-                        ContainerText: 'Tasks',
-                        ConColor: Color(0xff5FDC89),
-                        IconImage: 'images/FingerPrint/checkbox.png',
+                Padding(
+                  padding: const EdgeInsets.only(left: 20,top: 40),
+                  child: Column(
+                    children: [
+                      GestureDetector(
+                        child: CustomContainer(
+                          ContainerHeight: 190,
+                          ContainerWidth: 170,
+                          MeniContainerTop: 38,
+                          MeniContainerLeft: 35,
+                          MeniContainerHeight: 100,
+                          MeniContainerWidth: 100,
+                          ContainerText: 'Tasks',
+                          ConColor: const Color(0xff5FDC89),
+                          IconImage: 'images/FingerPrint/checkbox.png',
+                        ),
+                        onTap: (){
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const task_view(),
+                            ),
+                          );
+                        },
                       ),
-                      onTap: (){
-
-                      },
-                    ),
-                    SizedBox(height: 20,),
-                    GestureDetector(
-                      onTap: (){
-
-                      },
-                      child: CustomContainer(
-                        ContainerHeight: 240,
-                        ContainerWidth: 170,
-                        MeniContainerTop: 50,
-                        MeniContainerLeft: 10,
-                        MeniContainerHeight: 100,
-                        MeniContainerWidth: 100,
-                        ContainerText: 'Attendance - leaving',
-                        ConColor: Color(0xff5FDCDC),
-                        IconImage: 'images/FingerPrint/fingerprint.png',
+                      const SizedBox(height: 20,),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const AttendanceandLeaving(),
+                            ),
+                          );
+                        },
+                        child: CustomContainer(
+                          ContainerHeight: 240,
+                          ContainerWidth: 170,
+                          MeniContainerTop: 50,
+                          MeniContainerLeft: 10,
+                          MeniContainerHeight: 100,
+                          MeniContainerWidth: 100,
+                          ContainerText: 'Attendance - leaving',
+                          ConColor: const Color(0xff5FDCDC),
+                          IconImage: 'images/FingerPrint/fingerprint.png',
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
 
     );
@@ -157,8 +174,8 @@ class CustomContainer extends StatelessWidget {
                 ),
                 child: Image.asset(IconImage,scale:2),
               ),
-              SizedBox(height: 5,),
-              Text(ContainerText,style: TextStyle(color: Colors.white),),
+              const SizedBox(height: 5,),
+              Text(ContainerText,style: const TextStyle(color: Colors.white),),
             ],
           ),
         ),

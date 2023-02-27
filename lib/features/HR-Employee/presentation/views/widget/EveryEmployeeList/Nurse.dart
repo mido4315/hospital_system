@@ -8,17 +8,19 @@ class NurseTabView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-          ListTileCustom(employeeType: 1),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+            ListTileCustom(employeeType: 1),
+          ],
+        ),
       ),
     );
   }

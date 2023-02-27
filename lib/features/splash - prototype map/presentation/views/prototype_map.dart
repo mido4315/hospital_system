@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/color.dart';
+import '../../../Main/presentation/view/screens/main_page.dart';
 import '../../../attendance and leaving/Presentation/Views/Screens/Attendance and Leaving_Screen.dart';
 import '../../../attendance and leaving/Presentation/Views/Screens/Registered_Screen.dart';
+import '../../../sign In/presentation/views/SginIn.dart';
 import 'widgets/custom_gradient_background.dart';
 
 class PrototypeMap extends StatelessWidget {
@@ -66,9 +68,14 @@ class PrototypeMap extends StatelessWidget {
                       onPressed: () {
                         // Navigator.of(context).push(
                         //   MaterialPageRoute(
-                        //     builder: (context) => const AttendanceandLeaving(),
+                        //     builder: (context) => const SignIn(),
                         //   ),
                         // );
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const mainPage(),
+                          ),
+                        );
                       },
                     ),
                   ],
