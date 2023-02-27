@@ -11,6 +11,8 @@ import 'package:hospital_system/features/HR-Employee/presentation/views/widget/E
 import 'package:hospital_system/features/HR-Employee/presentation/views/widget/ListTileCustom.dart';
 import 'package:hospital_system/features/HR-Employee/presentation/views/widget/textFormField.dart';
 
+import 'new HR user.dart';
+
 TabController? tabController;
 int tabViewIndex = 0;
 
@@ -30,6 +32,15 @@ class _EmployeeListState extends State<EmployeeList>
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
+        floatingActionButton: FloatingActionButton(
+ backgroundColor: ConstantColor.lightGreen,
+
+          onPressed: (){
+            Show.snackBar(context: context, content: 'Add New Employee',duration: 2);
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>NewHRuser()));
+          },
+          child: Icon(Icons.add,color: ConstantColor.white,size: 40,),
+        ),
         body: Stack(
           children: [
             const Positioned(
