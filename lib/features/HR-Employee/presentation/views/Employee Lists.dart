@@ -36,7 +36,7 @@ class _EmployeeListState extends State<EmployeeList>
  backgroundColor: ConstantColor.lightGreen,
 
           onPressed: (){
-            Show.snackBar(context: context, content: 'Add New Employee',duration: 2);
+            Show.snackBar(context: context, content: 'Add New Employee',duration: 1);
             Navigator.push(context, MaterialPageRoute(builder: (context)=>NewHRuser()));
           },
           child: Icon(Icons.add,color: ConstantColor.white,size: 40,),
