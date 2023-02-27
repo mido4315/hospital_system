@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
           color: Color(0xFF22C7B8)
         ),),
       trailing: IconButton(
-        icon: Icon(Icons.notification_add),
+        icon: Image.asset('images/FingerPrint/notification.png',width: 25),
         onPressed: () {},
       ),
     );
