@@ -77,7 +77,7 @@ class _SignInState extends State<SignIn> {
                             hintText: 'Phone Number',
                             textInputType: TextInputType.number,
                             passmode: false,
-                            errorText: 'Plz Enter your Email ',
+                            errorText: 'The number you entered is not connected to an account.',
                             prefix: Icon(
                               Icons.phone_outlined,
                               color: ConstantColor.lightGreen,
@@ -90,7 +90,7 @@ class _SignInState extends State<SignIn> {
                             controller: passController,
                             hintText: 'Password',
                             passmode: true,
-                            errorText: 'plz Enter your Password',
+                            errorText: 'The password that you have entered is incorrect.',
                             prefix: Icon(
                               Icons.lock_outline,
                               color: ConstantColor.lightGreen,
