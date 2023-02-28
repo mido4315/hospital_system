@@ -35,8 +35,9 @@ class _task_viewState extends State<task_view> {
     return Scaffold(
       // backgroundColor: ConstantColor.white,
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back,
+        leading: IconButton(
+          onPressed: (){Navigator.pop(context);},
+          icon:Icon(Icons.arrow_back),
           color: ConstantColor.black3,
         ),
         shadowColor: Colors.transparent,
