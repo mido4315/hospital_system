@@ -10,12 +10,14 @@ class TextformFieldCustom extends StatefulWidget {
       required this.prefix,
       required this.errorText,
       required this.passmode,
-      this.textInputType});
+      this.textInputType,
+      this.passicon});
   TextEditingController controller = TextEditingController();
   String hintText;
   String errorText;
   bool passmode;
   Widget prefix;
+  bool? passicon = false;
 
   TextInputType? textInputType;
 
@@ -25,13 +27,13 @@ class TextformFieldCustom extends StatefulWidget {
 
 class _TextformFieldCustomState extends State<TextformFieldCustom> {
   @override
-  bool passicon = false;
+
   Widget build(BuildContext context) {
     return Column(children: [
       TextFormField(
         controller: widget.controller,
         keyboardType: widget.textInputType,
-        obscureText: !passicon,
+        obscureText: !widget.passicon!,
         decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: TextStyle(fontSize: 20, color: Colors.black26),
@@ -46,11 +48,11 @@ class _TextformFieldCustomState extends State<TextformFieldCustom> {
                 borderSide: BorderSide(color: Colors.black26)),
             prefixIcon: widget.prefix,
             suffixIcon: widget.passmode
-                ? passicon
+                ? widget.passicon!
                     ? IconButton(
                         onPressed: () {
-                          setState(() => passicon = !passicon);
-                          print(passicon);
+                          setState(() => widget.passicon = !widget.passicon!);
+                          print(widget.passicon!);
                         },
                         icon: Icon(
                           Icons.remove_red_eye,
@@ -59,7 +61,7 @@ class _TextformFieldCustomState extends State<TextformFieldCustom> {
                       )
                     : IconButton(
                         onPressed: () {
-                          setState(() => passicon = !passicon);
+                          setState(() => widget.passicon = !widget.passicon!);
                         },
                         icon: Icon(
                           Icons.remove_red_eye_outlined,

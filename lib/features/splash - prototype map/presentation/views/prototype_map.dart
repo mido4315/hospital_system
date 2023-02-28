@@ -73,7 +73,7 @@ class PrototypeMap extends StatelessWidget {
                         // );
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const mainPage(),
+                            builder: (context) => const SignIn(),
                           ),
                         );
                       },

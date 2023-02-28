@@ -5,6 +5,7 @@ import 'package:hospital_system/features/sign%20In/presentation/views/widgets/te
 
 import '../../../../core/constant/FreeWidget.dart';
 import '../../../../core/constant/color.dart';
+import '../../../Main/presentation/view/screens/main_page.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -14,11 +15,12 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passController = TextEditingController();
+
 
     return SafeArea(
       child: Scaffold(
@@ -70,6 +72,7 @@ class _SignInState extends State<SignIn> {
                       child: Column(
                         children: [
                           TextformFieldCustom(
+                            passicon:true ,
                             controller: emailController,
                             hintText: 'Phone Number',
                             textInputType: TextInputType.number,
@@ -83,6 +86,7 @@ class _SignInState extends State<SignIn> {
                           ),
                           SizedBox(height: 20,),
                           TextformFieldCustom(
+                            passicon: false,
                             controller: passController,
                             hintText: 'Password',
                             passmode: true,
@@ -102,6 +106,7 @@ class _SignInState extends State<SignIn> {
                     onPressed: () {
                       if(formKey.currentState!.validate()){
                         Show.snackBar(context: context, content: 'open Start Page',duration: 2);
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>mainPage()));
                       }
                       else Show.snackBar(context: context, content: 'try again');
                     },
