@@ -3,6 +3,33 @@ import 'package:flutter/material.dart';
 
 
 class Style {
+  static const TextStyle stylee = TextStyle(
+    fontSize: 14,
+    color: Colors.black,
+    fontFamily: 'poppins',
+  );
+  static const TextStyle buttonText = TextStyle(
+    fontSize: 16,
+    color: Color(0xff22C7B8),
+    fontFamily: 'poppins',
+  );
+  static const TextStyle buttonText2 = TextStyle(
+    fontSize: 14,
+    color: Colors.white,
+    fontFamily: 'poppins',
+  );
+  static const TextStyle appBarText = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: Color(0xff343434),
+    fontFamily: 'poppins',
+  );
+  static const TextStyle textLabel = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: Color.fromRGBO(0, 0, 0, 0.5),
+    fontFamily: 'poppins',
+  );
   static const TextStyle style1 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
@@ -58,12 +85,12 @@ class Style {
   static ThemeData englishTheme = ThemeData(
     textTheme: const TextTheme(
         headline1: TextStyle(
-      height: 2,
-      fontStyle: FontStyle.italic,
-      fontWeight: FontWeight.bold,
-      color: Colors.pink,
-      fontSize:18,
-    )),
+          height: 2,
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.bold,
+          color: Colors.pink,
+          fontSize:18,
+        )),
     fontFamily: 'PlayfairDisplay',
     backgroundColor: Colors.orange,
     primaryColor: Colors.tealAccent,

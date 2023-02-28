@@ -66,11 +66,6 @@ class PrototypeMap extends StatelessWidget {
                     RolesCustomButton(
                       role: roles[5],
                       onPressed: () {
-                        // Navigator.of(context).push(
-                        //   MaterialPageRoute(
-                        //     builder: (context) => const SignIn(),
-                        //   ),
-                        // );
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) => const SignIn(),
