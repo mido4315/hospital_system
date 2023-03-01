@@ -48,7 +48,7 @@ class CreateReport extends StatelessWidget{
                   height: 210,
                   child: Column(
                     children: [
-                      Image.asset('images/re.png'),
+                      Image.asset('images/report.png'),
                       const SizedBox(height: 10,),
                       CustomButton(label: "+  Upload Image",style:Style.buttonText, color: Colors.white,width: 165, onPressed: (){}),
                     ],
