@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/features/Doctor%20,%20Case/Presention/Viwes/Screens/CaseDetails%20red.dart';
+
+import 'TextWIDGET.dart';
 const Color color =Colors.grey;
 class CaseDetails extends StatefulWidget {
   const CaseDetails({Key? key}) : super(key: key);
