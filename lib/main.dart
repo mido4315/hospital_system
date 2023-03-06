@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hospital_system/features/Main/presentation/view/screens/main_page.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
 import 'package:hospital_system/features/profile/presentation/views/screens/profile.dart';
+import 'package:provider/provider.dart';
+import 'core/constant/Provider_Data.dart';
 import 'features/HR-Employee/presentation/views/Employee Lists.dart';
 import 'features/HR-Employee/presentation/views/new HR user.dart';
 import 'features/profile/presentation/views/screens/profile.dart';
@@ -16,13 +18,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: const Color(0xff22C7B8),
-        fontFamily: 'Poppins'
+    return ChangeNotifierProvider(
+      create: (context)=>Provider_data(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: const Color(0xff22C7B8),
+          fontFamily: 'Poppins'
+        ),
+        home:  const SplashView(),
       ),
-      home:  const SplashView(),
     );
   }
 }
