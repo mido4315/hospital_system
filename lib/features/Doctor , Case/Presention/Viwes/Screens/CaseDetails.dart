@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/features/Doctor%20,%20Case/Presention/Viwes/Screens/CaseDetails%20red.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../../core/constant/Provider_Data.dart';
 import 'TextWIDGET.dart';
 const Color color =Colors.grey;
 class CaseDetails extends StatefulWidget {
@@ -115,18 +117,19 @@ class _CaseDetailsState extends State<CaseDetails> {
             ),
           ),
           SizedBox(height: 150,),
-          ElevatedButton(
-            
+          Provider.of<Provider_data>(context).Prototype ==0? ElevatedButton(
+
             style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)
+             shape: RoundedRectangleBorder(
+               borderRadius: BorderRadius.circular(10)
               ),
-              minimumSize: Size(370, 53),
-              primary: Color(0xFF22C7B8),
-            ),
-              onPressed: (){
+               minimumSize: Size(370, 53),
+               primary: Color(0xFF22C7B8),
+             ),
+        onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>CaseDetailsred()));
-              }, child: Text('Call Doctor'))
+               }, child: Text('Call Doctor')):SizedBox()
+
 
 
         ],
