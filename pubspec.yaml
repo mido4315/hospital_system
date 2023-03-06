@@ -69,6 +69,7 @@ flutter:
   assets:
      - assets/tasks/
      - assets/EmployeeImage/
+     - assets/Cases/
      - assets/tasks/Group 2879.png
      - assets/tasks/Group 4692.png
      - assets/tasks/Group 4693.png

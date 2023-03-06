@@ -108,7 +108,7 @@ class _SignInState extends State<SignIn> {
                         Show.snackBar(context: context, content: 'open Start Page',duration: 2);
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>mainPage()));
                       }
-                      else Show.snackBar(context: context, content: 'try again');
+                      else Show.snackBar(context: context, content: 'try again',duration: 1);
                     },
                     style: ElevatedButton.styleFrom(
                       primary: ConstantColor.lightGreen
