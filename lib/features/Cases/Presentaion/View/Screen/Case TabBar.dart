@@ -3,6 +3,7 @@ import 'package:hospital_system/core/constant/FreeWidget.dart';
 import 'package:hospital_system/core/constant/color.dart';
 import 'package:hospital_system/features/Cases/Presentaion/View/Widget/TextCustom.dart';
 
+import 'Medical Measurement.dart';
 import 'MedicalRecord.dart';
 
 TabController? tabController;
@@ -23,13 +24,12 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
       child: Scaffold(
         body: Column(
           children: [
-
             ListTile(
               leading: IconButton(
                 onPressed: (){Navigator.pop(context);},
                 icon: Icon(Icons.chevron_left_outlined,size: 20,color: Colors.black,),
               ),
-              trailing: TextCustom(Title: 'Case Details',fontSize: 18,color: ConstantColor.black2),
+              title: TextCustom(Title: 'Case Details',fontSize: 18,color: ConstantColor.black2),
             ),
             SizedBox(height: 20,),
             Container(
@@ -53,10 +53,11 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
 
                     child: TabBarView(
                       controller: tabController,
+                      physics: NeverScrollableScrollPhysics(),
                       children: [
                         Center(child: Text('sjhdc'),),
                         MedicalRecord(),
-                        Center(child: Text('sjauihdiuwhehdc'),),
+                        MedicalMeasurement(),
                       ],
                     ),
                   ),

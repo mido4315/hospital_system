@@ -18,6 +18,7 @@ class _MedicalRecordState extends State<MedicalRecord> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 20,),
         ListTile(
           leading: Image(image: AssetImage('${ImageAssets.EmployeeImage}/e3.png'),),
           title: TextCustom(Title: 'Aml Ezzat',color: Colors.black,fontSize: 14),
@@ -57,7 +58,7 @@ printing and typesetting industry.Lorem Ipsum''',
             ],
           ),
         ),
-        SizedBox(height: PageSize.height(context)*0.19,),
+        SizedBox(height: PageSize.height(context)*0.16,),
         ElevatedButton(
           onPressed: () {
             Show.snackBar(context: context, content: 'Delete Case',duration: 1);
