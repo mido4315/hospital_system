@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class TextCustom extends StatelessWidget {
   TextCustom({
+    required this.fontSize,
     required this.Title,
     required this.color,
-    required this.fontSize,
+
   });
   String? Title;
   Color? color;
