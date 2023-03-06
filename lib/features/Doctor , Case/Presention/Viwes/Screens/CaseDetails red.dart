@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../../core/constant/Provider_Data.dart';
 import 'CaseDetails.dart';
 import 'Cases.dart';
 import 'TextWIDGET.dart';
@@ -24,7 +26,7 @@ class CaseDetailsred extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Status',style: TextStyle(color: color)),
+                Text('Status',style: TextStyle(color: Colors.blue)),
                 Row(
                   children: [
                     Text('Process'),
@@ -42,7 +44,7 @@ class CaseDetailsred extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(8,0,0,0),
             child: Row(
               children: [
-                Text('Case Description',style: TextStyle(color: color),textAlign: TextAlign.left,),
+                Text('Case Description',style: TextStyle(color: Colors.blue),textAlign: TextAlign.left,),
               ],
             ),
           ),
@@ -101,7 +103,7 @@ class CaseDetailsred extends StatelessWidget {
             ],
           ),
           SizedBox(height: 150,),
-          ElevatedButton(
+          Provider.of<Provider_data>(context).Prototype ==2?ElevatedButton(
 
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
@@ -112,7 +114,7 @@ class CaseDetailsred extends StatelessWidget {
               ),
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Cases()));
-              }, child: Text('End Case'))
+              }, child: Text('End Case')):SizedBox()
 
 
         ],
