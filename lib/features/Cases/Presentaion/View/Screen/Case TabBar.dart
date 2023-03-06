@@ -3,6 +3,8 @@ import 'package:hospital_system/core/constant/FreeWidget.dart';
 import 'package:hospital_system/core/constant/color.dart';
 import 'package:hospital_system/features/Cases/Presentaion/View/Widget/TextCustom.dart';
 
+import '../../../../Doctor , Case/Presention/Viwes/Screens/CaseDetails red.dart';
+import 'Cases.dart';
 import 'Medical Measurement.dart';
 import 'MedicalRecord.dart';
 
@@ -55,7 +57,7 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
                       controller: tabController,
                       physics: NeverScrollableScrollPhysics(),
                       children: [
-                        Center(child: Text('sjhdc'),),
+                        CaseDetailsred(),
                         MedicalRecord(),
                         MedicalMeasurement(),
                       ],
