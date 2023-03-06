@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../HR-Employee/presentation/views/Employee Lists.dart';
 import '../../../../attendance and leaving/Presentation/Views/Screens/Attendance and Leaving_Screen.dart';
 import '../../../../attendance and leaving/Presentation/Views/Widgets/CustomAppBar.dart';
@@ -15,7 +14,7 @@ class mainPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const CustomAppBar(),
+             CustomAppBar(),
             Row(
               children: [
                 Padding(

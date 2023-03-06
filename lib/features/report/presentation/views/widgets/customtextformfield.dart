@@ -6,10 +6,11 @@ import '../../../../../core/constant/style.dart';
 
 
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({Key? key, required this.label,this.widget,this.maxLine=1}) : super(key: key);
+  CustomTextFormField({Key? key, required this.label,this.widget,this.maxLine=1,this.color=Colors.white}) : super(key: key);
   final String label;
   Widget? widget;
   int maxLine;
+  Color color;
 
 
   @override
@@ -22,7 +23,7 @@ class CustomTextFormField extends StatelessWidget {
        floatingLabelBehavior: FloatingLabelBehavior.never,
         contentPadding: const EdgeInsets.fromLTRB(12, 20, 12, 12),
         filled: true,
-        fillColor: ConstantColor.white,
+        fillColor: color,
         suffixIcon:widget ?? const Text(""),
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(

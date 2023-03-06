@@ -3,8 +3,21 @@ import 'package:flutter/material.dart';
 
 
 class Style {
+  static const TextStyle measurementStyle2 = TextStyle(
+    fontSize: 10,
+    color:Color(0xff787878),
+    fontFamily: 'poppins',
+    fontWeight: FontWeight.w300,
+  );
+
+  static const TextStyle measurementStyle1 = TextStyle(
+    fontSize: 16,
+    color:Color(0xff343434),
+    fontFamily: 'poppins',
+    fontWeight: FontWeight.w400,
+  );
   static const TextStyle stylee = TextStyle(
-    fontSize: 14,
+    fontSize: 16,
     color: Colors.black,
     fontFamily: 'poppins',
   );

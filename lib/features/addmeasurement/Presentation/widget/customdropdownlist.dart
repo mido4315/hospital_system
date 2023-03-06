@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/constant/style.dart';
-import '../../model/employee.dart';
 
+List<String> list = <String>['Blood Pressure','Sugar analysis'];
 
-Employee emp =Employee(name: 'Ebrahem Elzainy',title: 'Specialist',role: 'Doctor');
-Employee emp2 =Employee(name: 'Ahmed Elzainy',title: 'Specialist',role: 'Doctor');
-Employee emp3 =Employee(name: 'Hassan Elzainy',title: 'Specialist',role: 'Doctor');
- List<String> list = <String>['Select Employee', emp.name,emp2.name, emp3.name];
+class CustomDropdownList extends StatefulWidget {
 
-class DropdownList extends StatefulWidget {
-
-  const DropdownList({super.key});
+  const CustomDropdownList({super.key});
 
   @override
-  State<DropdownList> createState() => _DropdownListState();
+  State<CustomDropdownList> createState() => _CustomDropdownListState();
 }
 
-class _DropdownListState extends State<DropdownList> {
+class _CustomDropdownListState extends State<CustomDropdownList> {
   String dropdownValue = list.first;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20,),
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width/2-25,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: Border.all(
@@ -35,7 +30,7 @@ class _DropdownListState extends State<DropdownList> {
           isExpanded:true,
           //isDense:true,
           value: dropdownValue,
-          icon: const Icon(Icons.arrow_right,color: Color(0xff7A7A7A),size: 35,),
+          icon: const Icon(Icons.arrow_drop_down_outlined,color: Colors.black,size: 35,),
           elevation: 16,
           style: Style.stylee,
           onChanged: (String? value) {

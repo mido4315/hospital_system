@@ -39,6 +39,7 @@ dependencies:
   percent_indicator: ^4.2.2
   dropdown_button2:
   dotted_border:
+  date_format:
 dev_dependencies:
   flutter_test:
     sdk: flutter

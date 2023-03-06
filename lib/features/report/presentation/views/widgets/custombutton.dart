@@ -11,12 +11,21 @@ class CustomButton extends StatelessWidget {
     required this.style,
     this.width=double.infinity,
     this.height=45,
+    this.radius=10,
+    this.icon,
+    this.borderColor=Colors.white,
+    this.borderWidth=0,
+
   }) : super(key: key);
   final String label;
   final Color color;
   TextStyle? style;
   double width;
   double height;
+  double radius;
+  IconData? icon;
+  Color borderColor;
+  double borderWidth;
   final Function? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -24,16 +33,22 @@ class CustomButton extends StatelessWidget {
     return  ElevatedButton(
       style: ElevatedButton.styleFrom(
       backgroundColor: color,
-      minimumSize:  Size(width,height),
+      fixedSize:  Size(width,height),
         shape: RoundedRectangleBorder(
-          side:BorderSide(color: Color(0xff22C7B8),width: 2),
-            borderRadius: BorderRadius.circular(10.0)),
+          side: BorderSide(color: borderColor ,width: borderWidth),
+            borderRadius: BorderRadius.circular(radius)),
     ),
       onPressed:(){
         onPressed!();
       },
-      child: Text(
-        label ,style: style,textAlign: TextAlign.center,),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children:[
+        icon!=null?Icon(icon):Text(""),
+          const SizedBox(width: 2,),
+          Text(
+          label ,style: style,textAlign: TextAlign.center,),
+      ]),
     );
   }
 }

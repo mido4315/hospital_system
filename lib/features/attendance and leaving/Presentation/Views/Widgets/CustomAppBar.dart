@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../../../../profile/presentation/views/screens/profile.dart';
+
+
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    super.key,
-  });
+   CustomAppBar();
 
   @override
   Widget build(BuildContext context) {
