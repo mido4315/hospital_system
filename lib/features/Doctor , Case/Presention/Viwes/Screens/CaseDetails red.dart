@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 import 'CaseDetails.dart';
 import 'Cases.dart';
+import 'TextWIDGET.dart';
 class CaseDetailsred extends StatelessWidget {
   const CaseDetailsred({Key? key}) : super(key: key);
 

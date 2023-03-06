@@ -4,6 +4,7 @@ class ImageAssets{
  static const String imageRoot = 'assets/tasks';
  static const String SignInRoot= 'assets/Sign_In';
 
+ static const String EmployeeImage ='assets/EmployeeImage';
 
  static const String calander = '$imageRoot/Group 2879.png';
  static const String finshed = '$imageRoot/Group 4692.png';
