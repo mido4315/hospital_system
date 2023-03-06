@@ -127,7 +127,7 @@ class _CaseDetailsState extends State<CaseDetails> {
                primary: Color(0xFF22C7B8),
              ),
         onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>CaseDetailsred()));
+             // Navigator.push(context, MaterialPageRoute(builder: (context)=>CaseDetailsred()));
                }, child: Text('Call Doctor')):SizedBox()
 
 
