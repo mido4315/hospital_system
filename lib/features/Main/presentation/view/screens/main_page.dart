@@ -154,16 +154,19 @@ class mainPage extends StatelessWidget {
                     ? true
                     : false,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 15,left: 5),
+                  padding:  EdgeInsets.all(MediaQuery.of(context).size.width*0.04),
                   child: Stack(
                     children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffDC915F),
+                      GestureDetector(
+                        onTap: (){},
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0xffDC915F),
+                          ),
+                          width: 360,
+                          height: 140,
                         ),
-                        width: 360,
-                        height: 140,
                       ),
                       Positioned(
                         top: 15,
