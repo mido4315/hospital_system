@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../../core/constant/Provider_Data.dart';
 import '../../../../Cases/Presentaion/View/Screen/Cases.dart';
 import 'CaseDetails.dart';
 import 'Cases.dart';
@@ -65,7 +67,7 @@ class CaseDetailsred extends StatelessWidget {
             SizedBox(
               width: 152,
               height: 45,
-              child: ElevatedButton(
+              child:Provider.of<Provider_data>(context).Prototype ==2? ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)
@@ -78,12 +80,12 @@ class CaseDetailsred extends StatelessWidget {
                       Icon(Icons.add,size: 40,),
                       Text('Add Nurse',),
                     ],
-                  )),
+                  )):SizedBox()
             ),
             SizedBox(
               width: 150,
               height: 45,
-              child: ElevatedButton(
+              child: Provider.of<Provider_data>(context).Prototype ==2?ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)
@@ -96,12 +98,12 @@ class CaseDetailsred extends StatelessWidget {
                       Icon(Icons.add,size: 40,),
                       Text('Request',),
                     ],
-                  )),
+                  )):SizedBox()
             ),
           ],
         ),
         SizedBox(height: 150,),
-        ElevatedButton(
+        Provider.of<Provider_data>(context).Prototype ==2?ElevatedButton(
 
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
@@ -112,7 +114,7 @@ class CaseDetailsred extends StatelessWidget {
             ),
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Cases()));
-            }, child: Text('End Case'))
+            }, child: Text('End Case')):SizedBox()
 
 
       ],

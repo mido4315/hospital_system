@@ -4,6 +4,7 @@ import 'package:hospital_system/features/Main/presentation/view/screens/main_pag
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
 import 'package:hospital_system/features/profile/presentation/views/screens/profile.dart';
 import 'package:provider/provider.dart';
+import 'features/Cases/Presentaion/View/Screen/Case_TabBar_Details.dart';
 import 'features/HR-Employee/presentation/views/Employee Lists.dart';
 import 'features/HR-Employee/presentation/views/new HR user.dart';
 import 'features/addmeasurement/Presentation/screen/addmeasurement.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           primaryColor: const Color(0xff22C7B8),
           fontFamily: 'Poppins'
       ),
-      home:SplashView(),
+      home:CaseTabDetails(),
 
 
       //const SplashView(),
