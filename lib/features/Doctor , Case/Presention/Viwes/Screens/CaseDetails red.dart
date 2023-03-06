@@ -85,7 +85,7 @@ class CaseDetailsred extends StatelessWidget {
               SizedBox(
                 width: 150,
                 height: 45,
-                child: ElevatedButton(
+                child:Provider.of<Provider_data>(context).Prototype ==2? ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)
@@ -98,7 +98,7 @@ class CaseDetailsred extends StatelessWidget {
                         Icon(Icons.add,size: 40,),
                         Text('Request',),
                       ],
-                    )),
+                    )):SizedBox(),
               ),
             ],
           ),
