@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
 
 class Registered extends StatelessWidget {
   const Registered({Key? key}) : super(key: key);
@@ -54,20 +55,28 @@ class Registered extends StatelessWidget {
                 height: 200,
               ),
 
-              Container(
-                alignment: Alignment.bottomCenter,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: const Color(0xFFffffff), width: 2)),
-                child: const CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  child: Icon(
-                    Icons.arrow_right_alt,
-                    color: Color(0xFFffffff),
-                    size: 40,
-                  ),
-                  radius: 30,
-                ),
+              Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      alignment: Alignment. center,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: const Color(0xFFffffff), width: 2)),
+                      child:  Align(
+                        alignment: Alignment.center,
+                        child: IconButton(
+                          icon:Icon(Icons.arrow_right_alt,
+                            color: Color(0xFFffffff),
+                            size: 35,), onPressed: () {
+                          Navigator .push(context, MaterialPageRoute(builder: (context)=>AttendanceandLeaving()));
+                        } ,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
             ],
           ),

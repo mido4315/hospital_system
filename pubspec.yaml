@@ -36,8 +36,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  provider: ^6.0.5
   percent_indicator: ^4.2.2
-
+  dropdown_button2:
+  dotted_border:
+  date_format:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -65,6 +68,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/tasks/
+     - assets/EmployeeImage/
      - assets/tasks/Group 2879.png
      - assets/tasks/Group 4692.png
      - assets/tasks/Group 4693.png

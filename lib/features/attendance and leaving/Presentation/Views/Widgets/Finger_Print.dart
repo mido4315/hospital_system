@@ -18,6 +18,7 @@ class _FingerPrintState extends State<FingerPrint> {
   void initState() {
    super.initState();
    isBiometricAvailable();
+   BiometricHelper();
   }
   isBiometricAvailable()async{
     showBiometrics =(await BiometricHelper().hasEnrolledBiometrics) as bool;
@@ -34,11 +35,13 @@ class _FingerPrintState extends State<FingerPrint> {
         children: [
           Container(
             child: GestureDetector(
-              onTap: ()async{
-                isAuthenticated =await BiometricHelper().authenticate();
-                if(isAuthenticated){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Registered()));
-                }
+              onTap: (){
+                setState(() async{
+    isAuthenticated =await BiometricHelper().authenticate();
+    if(isAuthenticated){
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Registered()));
+
+                }});
 
               },
               child: Image.asset(
