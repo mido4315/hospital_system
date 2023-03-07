@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/constant/Provider_Data.dart';
 import 'TextWIDGET.dart';
-const Color color =Colors.grey;
+
+const Color color = Colors.grey;
+
 class CaseDetails extends StatefulWidget {
   const CaseDetails({Key? key}) : super(key: key);
 
@@ -34,7 +36,7 @@ class _CaseDetailsState extends State<CaseDetails> {
                   visible: _isVisible,
                   child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFFFDE7D9),
+                          color: const Color(0xFFFDE7D9),
                           borderRadius: BorderRadius.circular(10)),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(13, 0, 6, 15),
@@ -44,7 +46,7 @@ class _CaseDetailsState extends State<CaseDetails> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   'You have request',
                                   style: TextStyle(color: Colors.orangeAccent),
                                 ),
@@ -52,42 +54,60 @@ class _CaseDetailsState extends State<CaseDetails> {
                                     onPressed: () {
                                       showToast();
                                     },
-                                    icon: Icon(Icons.close_rounded))
+                                    icon: const Icon(Icons.close_rounded))
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 2,
                             ),
-                            Text('''You have a new request from the doctor, please
+                            const Text(
+                                '''You have a new request from the doctor, please
  follow up and implement the request as soon as possible'''),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    minimumSize: Size(80, 40),
+                                    minimumSize: const Size(80, 40),
                                     primary: Colors.deepOrange),
                                 onPressed: () {},
-                                child: Text('show Details'))
+                                child: const Text('show Details'))
                           ],
                         ),
                       )),
                 )),
-
-            TextWidgets(title: 'Patient Name', subtitle: 'Ebrahim Khaled',),
-            TextWidgets(title: 'Age', subtitle: '24 years',),
-            TextWidgets(title: 'phone number', subtitle: '254110241423',),
-            TextWidgets(title: 'Date', subtitle: '24,04,2021',),
-            TextWidgets(title: 'Doctor', subtitle: 'Salma Ahmed',),
-            TextWidgets(title: 'Nurse', subtitle: 'Ali islam',),
+            TextWidgets(
+              title: 'Patient Name',
+              subtitle: 'Ebrahim Khaled',
+            ),
+            TextWidgets(
+              title: 'Age',
+              subtitle: '24 years',
+            ),
+            TextWidgets(
+              title: 'phone number',
+              subtitle: '254110241423',
+            ),
+            TextWidgets(
+              title: 'Date',
+              subtitle: '24,04,2021',
+            ),
+            TextWidgets(
+              title: 'Doctor',
+              subtitle: 'Salma Ahmed',
+            ),
+            TextWidgets(
+              title: 'Nurse',
+              subtitle: 'Ali islam',
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Status',style: TextStyle(color: color)),
+                  const Text('Status', style: TextStyle(color: color)),
                   Row(
-                    children: [
+                    children: const [
                       Text('Process'),
                       Icon(
                         Icons.timelapse_rounded,
@@ -99,17 +119,21 @@ class _CaseDetailsState extends State<CaseDetails> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(8,0,0,0),
+              padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
               child: Row(
-                children: [
-                  Text('Case Description',style: TextStyle(color: color),textAlign: TextAlign.left,),
+                children: const [
+                  Text(
+                    'Case Description',
+                    style: TextStyle(color: color),
+                    textAlign: TextAlign.left,
+                  ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(5,0,0,0),
+              padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
               child: Row(
-                children: [
+                children: const [
                   Text('''
  Details note : Lorem Ipsum is simply dummy
  text of the printing and typesetting industry.
@@ -117,26 +141,25 @@ class _CaseDetailsState extends State<CaseDetails> {
                 ],
               ),
             ),
-            SizedBox(height: 150,),
-            Provider.of<Provider_data>(context).Prototype ==0? ElevatedButton(
-
-              style: ElevatedButton.styleFrom(
-               shape: RoundedRectangleBorder(
-                 borderRadius: BorderRadius.circular(10)
-                ),
-                 minimumSize: Size(370, 53),
-                 primary: Color(0xFF22C7B8),
-               ),
-          onPressed: (){
-               // Navigator.push(context, MaterialPageRoute(builder: (context)=>CaseDetailsred()));
-                 }, child: Text('Call Doctor')):SizedBox()
-
-
-
+            const SizedBox(
+              height: 150,
+            ),
+            Provider.of<Provider_data>(context).Prototype == 0
+                ? ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      minimumSize: const Size(370, 53),
+                      primary: const Color(0xFF22C7B8),
+                    ),
+                    onPressed: () {
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>CaseDetailsred()));
+                    },
+                    child: const Text('Call Doctor'))
+                : const SizedBox()
           ],
         ),
       ),
     );
   }
 }
-

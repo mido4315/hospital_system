@@ -39,7 +39,7 @@ class Style {
     fontFamily: 'poppins',
   );
   static const TextStyle textLabel = TextStyle(
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: FontWeight.w400,
     color: Color.fromRGBO(0, 0, 0, 0.5),
     fontFamily: 'poppins',

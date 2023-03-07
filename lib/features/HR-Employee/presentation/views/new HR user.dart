@@ -67,22 +67,22 @@ class _NewHRuserState extends State<NewHRuser> {
                         errorText: 'try Again',
                         passmode: false,
                         iconData: Icons.perm_identity),
-                    DropDownButtonCustom(
-                        hitntitle: 'Gender',
-                        icon: Icons.male,
-                        listType: EmployeeLists.Gender),
-                    DropDownButtonCustom(
-                        hitntitle: 'Specialist',
-                        icon: Icons.camera_alt_outlined,
-                        listType: EmployeeLists.Specialist),
-                    DropDownButtonCustom(
-                        hitntitle: 'Date of Birth',
-                        icon: Icons.date_range,
-                        listType: EmployeeLists.DataOfBirth),
-                    DropDownButtonCustom(
-                        hitntitle: 'Statues',
-                        icon: Icons.heart_broken_sharp,
-                        listType: EmployeeLists.Statues),
+                    // DropDownButtonCustom(
+                    //     hitntitle: 'Gender',
+                    //     icon: Icons.male,
+                    //     listType: EmployeeLists.Gender),
+                    // DropDownButtonCustom(
+                    //     hitntitle: 'Specialist',
+                    //     icon: Icons.camera_alt_outlined,
+                    //     listType: EmployeeLists.Specialist),
+                    // DropDownButtonCustom(
+                    //     hitntitle: 'Date of Birth',
+                    //     icon: Icons.date_range,
+                    //     listType: EmployeeLists.DataOfBirth),
+                    // DropDownButtonCustom(
+                    //     hitntitle: 'Statues',
+                    //     icon: Icons.heart_broken_sharp,
+                    //     listType: EmployeeLists.Statues),
                     newformFieldCustom(
                         controller: Con_Phone,
                         hintText: 'Phone Number',

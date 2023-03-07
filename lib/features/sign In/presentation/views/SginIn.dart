@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_system/core/constant/MediaQuery.dart';
-import 'package:hospital_system/core/constant/imgeassets.dart';
 
+import 'package:hospital_system/core/constant/imgeassets.dart';
+import 'package:hospital_system/features/sign%20In/presentation/views/widgets/textFormField.dart';
+
+import '../../../../core/constant/FreeWidget.dart';
 import '../../../../core/constant/color.dart';
+import '../../../HR-Employee/presentation/views/widget/textformfieldCustom.dart';
+import '../../../Main/presentation/view/screens/main_page.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -12,11 +16,12 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passController = TextEditingController();
+
 
     return SafeArea(
       child: Scaffold(
@@ -41,67 +46,77 @@ class _SignInState extends State<SignIn> {
               height: PageSize.height(context),
               width: PageSize.width(context),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image(
-                    image: AssetImage(ImageAssets.applogo),
+                  SizedBox(),
+                  const SizedBox(
+                    height: 120,
+                    width: 120,
+                    child: Image(
+                      image: AssetImage(ImageAssets.applogo,),
+                    ),
                   ),
+                  SizedBox(height: 15,),
                   Text(
                     'Welcome back !',
                     style: TextStyle(
                         fontSize: 26, color: ConstantColor.lightGreen),
                   ),
-                  Text('data'),
+                  SizedBox(height: 8,),
+                  Text('To Continue,Login New',style: TextStyle(color: ConstantColor.Gray,fontSize: 14),),
+                  SizedBox(height: 70,),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Form(
                       key: formKey,
                       child: Column(
                         children: [
-                          TextFormField(
+                          TextformFieldCustom(
                             controller: emailController,
-                            decoration: InputDecoration(
-                              hintText: 'Phone Number',
-                              hintStyle: TextStyle(
-                                color: Colors.black26
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
-                                  color: Colors.redAccent
-                                )
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ConstantColor.lightGreen)
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
-                                  color: Colors.black26
-                                )
-                              ),
-                              prefixIcon: Icon(
-                                Icons.local_phone_outlined,
-                                color: ConstantColor.lightGreen,
-                              ),
+                            hintText: 'Phone Number',
+                            textInputType: TextInputType.number,
+                            passmode: false,
+                            errorText: 'The number you entered is not connected to an account.',
+                            prefix: Icon(
+                              Icons.phone_outlined,
+                              color: ConstantColor.lightGreen,
                             ),
-                            validator: (value) {
-                              if (value!.length < 6)
-                                return null;
-                              else
-                                return 'plz enter your E_Mail';
-                            },
+
                           ),
-                          TextFormField(),
+                          SizedBox(height: 20,),
+                          TextformFieldCustom(
+                            passmode: false,
+                            controller: passController,
+                            hintText: 'Password',
+                            errorText: 'The password that you have entered is incorrect.',
+                            prefix: Icon(
+                              Icons.lock_outline,
+                              color: ConstantColor.lightGreen,
+                            ),
+
+                          ),
                         ],
                       ),
                     ),
                   ),
+                  SizedBox(height: 50,),
                   ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Login'),
+                    onPressed: () {
+                      if(formKey.currentState!.validate()){
+                        Show.snackBar(context: context, content: 'open Start Page',duration: 2);
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>mainPage()));
+                      }
+                      else Show.snackBar(context: context, content: 'try again');
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: ConstantColor.lightGreen
+                    ),
+                    child: SizedBox(
+                      height: 50,
+                      width: PageSize.width(context)*0.9,
+                      child:Center(child: Text('Login',style: TextStyle(fontSize: 16,color:Colors.white),)),
+                    ),
                   )
                 ],
               ),

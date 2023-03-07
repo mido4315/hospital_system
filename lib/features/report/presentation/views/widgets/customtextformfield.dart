@@ -16,12 +16,12 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      maxLines: maxLine,
+      maxLines: 5,
       decoration:  InputDecoration(
         floatingLabelAlignment:  FloatingLabelAlignment.start ,
         alignLabelWithHint: true,
        floatingLabelBehavior: FloatingLabelBehavior.never,
-        contentPadding: const EdgeInsets.fromLTRB(12, 20, 12, 12),
+        contentPadding: const EdgeInsets.fromLTRB(12, 8, 12, 12),
         filled: true,
         fillColor: color,
         suffixIcon:widget ?? const Text(""),

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:hospital_system/core/constant/Provider_Data.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../Doctor , Case/Presention/Viwes/Screens/Cases.dart';
 import '../../../../HR-Employee/presentation/views/Employee Lists.dart';
 import '../../../../attendance and leaving/Presentation/Views/Screens/Attendance and Leaving_Screen.dart';
 import '../../../../attendance and leaving/Presentation/Views/Widgets/CustomAppBar.dart';
+import '../../../../call_screen/presentation/views/Create Call.dart';
 import '../../../../report/presentation/views/create_report.dart';
 import '../../../../tasks/presentation/views/task_view.dart';
 import 'package:hospital_system/core/constant/Provider_Data.dart';
@@ -19,7 +21,7 @@ class mainPage extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-               CustomAppBar(),
+              CustomAppBar(),
               Row(
                 children: [
                   Padding(
@@ -59,11 +61,26 @@ class mainPage extends StatelessWidget {
                                 : 'images/FingerPrint/add.png',
                           ),
                           onTap: () {
-                            Navigator.of(context).push(
+                            provider_data.Prototype == 0 ||
+                                provider_data.Prototype == 1 ||
+                                provider_data.Prototype == 2
+                                ? (Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) =>  call(),
+                              ),
+                            ))
+                                : provider_data.Prototype == 3 ||
+                                provider_data.Prototype == 4
+                                ? (Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => Cases(),
+                              ),
+                            ))
+                                : (Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => EmployeeList(),
                               ),
-                            );
+                            ));
                           },
                         ),
 
@@ -153,51 +170,72 @@ class mainPage extends StatelessWidget {
                     provider_data.Prototype == 4
                     ? true
                     : false,
-                child: Padding(
-                  padding:  EdgeInsets.all(MediaQuery.of(context).size.width*0.04),
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffDC915F),
-                        ),
-                        width: 360,
-                        height: 140,
+                child: GestureDetector(
+
+                  onTap: () {
+                    provider_data.Prototype == 0 ||
+                        provider_data.Prototype == 2
+                        ?
+                    (Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const Cases(),
                       ),
-                      Positioned(
-                        top: 15,
-                        left: 40,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 135),
-                              child: Text(
-                                provider_data.Prototype == 0 ||
-                                    provider_data.Prototype == 2
-                                    ? 'Cases'
-                                    : 'Employee',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                            Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                  color: Color(0xffDC915F),
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(color: Colors.white)),
-                              child: Image.asset(
+                    ))
+                        : (Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => EmployeeList(),
+                      ),
+                    ));
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.all(MediaQuery
+                        .of(context)
+                        .size
+                        .width * 0.04),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0xffDC915F),
+                          ),
+                          width: 360,
+                          height: 140,
+                        ),
+                        Positioned(
+                          top: 15,
+                          left: 40,
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 135),
+                                child: Text(
                                   provider_data.Prototype == 0 ||
                                       provider_data.Prototype == 2
-                                      ? 'images/FingerPrint/shield.png'
-                                      : 'images/FingerPrint/Empolyees.png',
-                                  scale: 2),
-                            ),
-                          ],
+                                      ? 'Cases'
+                                      : 'Employee',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              Container(
+                                width: 100,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                    color: Color(0xffDC915F),
+                                    borderRadius: BorderRadius.circular(20),
+                                    border: Border.all(color: Colors.white)),
+                                child: Image.asset(
+                                    provider_data.Prototype == 0 ||
+                                        provider_data.Prototype == 2
+                                        ? 'images/FingerPrint/shield.png'
+                                        : 'images/FingerPrint/Empolyees.png',
+                                    scale: 2),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

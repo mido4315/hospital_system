@@ -12,18 +12,29 @@ class MedicalMeasurement extends StatefulWidget {
 }
 
 class MedicalMeasurement_s extends State<MedicalMeasurement> {
-  bool aaa =false;
-  bool bbb =false;
+  bool aaa = false;
+  bool bbb = false;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 20,),
+        SizedBox(
+          height: 20,
+        ),
         ListTile(
-          leading: Image(image: AssetImage('${ImageAssets.EmployeeImage}/e3.png'),),
-          title: TextCustom(Title: 'Aml Ezzat',color: Colors.black,fontSize: 14),
-          subtitle: TextCustom(Title:'Specialist - Nurse',color: ConstantColor.lightGreen,fontSize: 14, ),
-          trailing: TextCustom(Title: '13 Mar 2020',color: Colors.black54,fontSize: 12),
+          leading: Image(
+            image: AssetImage('${ImageAssets.EmployeeImage}/e3.png'),
+          ),
+          title:
+              TextCustom(Title: 'Aml Ezzat', color: Colors.black, fontSize: 14),
+          subtitle: TextCustom(
+            Title: 'Specialist - Nurse',
+            color: ConstantColor.lightGreen,
+            fontSize: 14,
+          ),
+          trailing: TextCustom(
+              Title: '13 Mar 2020', color: Colors.black54, fontSize: 12),
         ),
         TextCustom(
             Title: '''Details note : Lorem Ipsum is simply dummy text of 
@@ -32,10 +43,25 @@ printing and typesetting industry.Lorem Ipsum''',
             fontSize: 14),
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Align(alignment: Alignment.centerLeft,child: TextCustom(Title: 'Medical Record', color: Colors.black, fontSize: 18)),
+          child: Align(
+              alignment: Alignment.centerLeft,
+              child: TextCustom(
+                  Title: 'Medical Record', color: Colors.black, fontSize: 18)),
         ),
-        MedicalListTile(title: 'Blood pressure',trailingTitle: '120- 129',iconboolean: aaa,function: (){aaa=!aaa;}),
-        MedicalListTile(title: 'Sugar analysis',trailingTitle: '120- 129',iconboolean: bbb,function: (){bbb=!bbb;}),
+        MedicalListTile(
+            title: 'Blood pressure',
+            trailingTitle: '120- 129',
+            iconboolean: aaa,
+            function: () {
+              aaa = !aaa;
+            }),
+        MedicalListTile(
+            title: 'Sugar analysis',
+            trailingTitle: '120- 129',
+            iconboolean: bbb,
+            function: () {
+              bbb = !bbb;
+            }),
 
         // Padding(
         //   padding: const EdgeInsets.all(12.0),
@@ -58,18 +84,21 @@ printing and typesetting industry.Lorem Ipsum''',
         //     ],
         //   ),
         // ),
-        SizedBox(height: PageSize.height(context)*0.378,),
+        SizedBox(
+          height: PageSize.height(context) * 0.3,
+        ),
         ElevatedButton(
           onPressed: () {
-            Show.snackBar(context: context, content: 'Delete Case',duration: 1);
+            Show.snackBar(
+                context: context, content: 'Delete Case', duration: 1);
           },
-          style: ElevatedButton.styleFrom(
-              primary: Colors.red
-          ),
+          style: ElevatedButton.styleFrom(primary: Colors.red),
           child: Container(
             height: 50,
             width: PageSize.width(context) * 0.85,
-            child: Center(child: TextCustom(Title: 'End Case',color: Colors.white,fontSize: 15)),
+            child: Center(
+                child: TextCustom(
+                    Title: 'End Case', color: Colors.white, fontSize: 15)),
           ),
         ),
       ],
@@ -78,8 +107,8 @@ printing and typesetting industry.Lorem Ipsum''',
 
   Widget MedicalListTile(
       {required String title,
-        required bool iconboolean,
-        required Function function,
+      required bool iconboolean,
+      required Function function,
       required String trailingTitle}) {
     return ListTile(
       leading: IconButton(
@@ -93,8 +122,9 @@ printing and typesetting industry.Lorem Ipsum''',
           color: ConstantColor.lightGreen,
         ),
       ),
-      title: TextCustom(Title: title,color: Colors.black,fontSize: 14),
-      trailing: TextCustom(Title: trailingTitle,color: Colors.black,fontSize: 12),
+      title: TextCustom(Title: title, color: Colors.black, fontSize: 14),
+      trailing:
+          TextCustom(Title: trailingTitle, color: Colors.black, fontSize: 12),
     );
   }
 }

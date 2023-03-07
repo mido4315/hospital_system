@@ -26,8 +26,8 @@ class _CaseTabDetailsState extends State<CaseTabDetails> with TickerProviderStat
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Padding(
-            padding: const EdgeInsets.all(12.0),
+          title: const Padding(
+            padding: EdgeInsets.all(12.0),
             child: Text(
               'Cases Details',
               style: TextStyle(color: Color(0xFFA9A9A9)),
@@ -35,7 +35,7 @@ class _CaseTabDetailsState extends State<CaseTabDetails> with TickerProviderStat
           ),
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_sharp,
               color: Colors.black,
             ),
@@ -59,7 +59,7 @@ class _CaseTabDetailsState extends State<CaseTabDetails> with TickerProviderStat
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ElevatedButtonTabBar(title: 'Case',TabViewIndex: 0),
-                          SizedBox(width: 10,),
+                          const SizedBox(width: 10,),
                           ElevatedButtonTabBar(title: 'Medical Measurement',TabViewIndex: 1),
                         ],
                       ),
@@ -71,10 +71,10 @@ class _CaseTabDetailsState extends State<CaseTabDetails> with TickerProviderStat
 
                       child: TabBarView(
                         controller: tabController,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         children: [
-                          Center(child: CaseDetails(),),
-                          MedicalMeasurement(),
+                          const Center(child: CaseDetails(),),
+                          const MedicalMeasurement(),
                         ],
                       ),
                     ),
@@ -108,11 +108,11 @@ class _CaseTabDetailsState extends State<CaseTabDetails> with TickerProviderStat
             primary: tabViewIndex == TabViewIndex
                 ? ConstantColor.lightGreen
                 : ConstantColor.white,
-            side: BorderSide(color: Colors.black26)),
+            side: const BorderSide(color: Colors.black26)),
         child: Center(
           child: Text(
             title,
-            style: TextStyle(color: Colors.black, fontSize: 14),
+            style: const TextStyle(color: Colors.black, fontSize: 14),
           ),
         ),
       ),

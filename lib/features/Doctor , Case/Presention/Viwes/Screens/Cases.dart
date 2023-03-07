@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../Cases/Presentaion/View/Screen/Case TabBar.dart';
+
 class Cases extends StatelessWidget {
   const Cases({Key? key}) : super(key: key);
 
@@ -11,8 +13,8 @@ class Cases extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Padding(
-            padding: const EdgeInsets.all(12.0),
+          title: const Padding(
+            padding: EdgeInsets.all(12.0),
             child: Text(
               'Cases',
               style: TextStyle(color: Color(0xFFA9A9A9)),
@@ -20,7 +22,7 @@ class Cases extends StatelessWidget {
           ),
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_sharp,
               color: Colors.black,
             ),
@@ -29,14 +31,14 @@ class Cases extends StatelessWidget {
             },
           ),
         ),
-        backgroundColor: Color(0xFFE6E6E6),
+        backgroundColor: const Color(0xFFE6E6E6),
         body: Column(children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Container(
               height: height * .22,
               decoration: BoxDecoration(
-                  color: Color(0xFFffffff),
+                  color: const Color(0xFFffffff),
                   borderRadius: BorderRadius.circular(10)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,17 +50,17 @@ class Cases extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFF22C7B8),
+                              color: const Color(0xFF22C7B8),
                               borderRadius: BorderRadius.circular(5)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.person,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text('Ebrahem Khaled')
+                        const Text('Ebrahem Khaled')
                       ],
                     ),
                   ),
@@ -68,30 +70,32 @@ class Cases extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFF22C7B8),
+                              color: const Color(0xFF22C7B8),
                               borderRadius: BorderRadius.circular(5)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.calendar_month,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text('24 . 04 . 2021')
+                        const Text('24 . 04 . 2021')
                       ],
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(280, 50),
-                          primary: Color(0xFF1AD672),
+                          minimumSize: const Size(280, 50),
+                          primary: const Color(0xFF1AD672),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           )),
-                      onPressed: () {},
-                      child: Text('Show Details'))
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => CaseTabView(),));
+                      },
+                      child: const Text('Show Details'))
                 ],
               ),
             ),
@@ -101,7 +105,7 @@ class Cases extends StatelessWidget {
             child: Container(
               height: height * .22,
               decoration: BoxDecoration(
-                  color: Color(0xFFffffff),
+                  color: const Color(0xFFffffff),
                   borderRadius: BorderRadius.circular(10)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -113,17 +117,17 @@ class Cases extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFF22C7B8),
+                              color: const Color(0xFF22C7B8),
                               borderRadius: BorderRadius.circular(5)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.person,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text('Ebrahem Khaled')
+                        const Text('Ebrahem Khaled')
                       ],
                     ),
                   ),
@@ -133,30 +137,30 @@ class Cases extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFF22C7B8),
+                              color: const Color(0xFF22C7B8),
                               borderRadius: BorderRadius.circular(5)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.calendar_month,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text('24 . 04 . 2021')
+                        const Text('24 . 04 . 2021')
                       ],
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(280, 50),
-                          primary: Color(0xFF1AD672),
+                          minimumSize: const Size(280, 50),
+                          primary: const Color(0xFF1AD672),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           )),
                       onPressed: () {},
-                      child: Text('Show Details'))
+                      child: const Text('Show Details'))
                 ],
               ),
             ),
@@ -166,7 +170,7 @@ class Cases extends StatelessWidget {
             child: Container(
               height: height * .22,
               decoration: BoxDecoration(
-                  color: Color(0xFFffffff),
+                  color: const Color(0xFFffffff),
                   borderRadius: BorderRadius.circular(10)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -178,17 +182,17 @@ class Cases extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFF22C7B8),
+                              color: const Color(0xFF22C7B8),
                               borderRadius: BorderRadius.circular(5)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.person,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text('Ebrahem Khaled')
+                        const Text('Ebrahem Khaled')
                       ],
                     ),
                   ),
@@ -198,30 +202,30 @@ class Cases extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFF22C7B8),
+                              color: const Color(0xFF22C7B8),
                               borderRadius: BorderRadius.circular(5)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.calendar_month,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text('24 . 04 . 2021')
+                        const Text('24 . 04 . 2021')
                       ],
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          minimumSize: Size(280, 50),
-                          primary: Color(0xFF1AD672),
+                          minimumSize: const Size(280, 50),
+                          primary: const Color(0xFF1AD672),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           )),
                       onPressed: () {},
-                      child: Text('Show Details'))
+                      child: const Text('Show Details'))
                 ],
               ),
             ),

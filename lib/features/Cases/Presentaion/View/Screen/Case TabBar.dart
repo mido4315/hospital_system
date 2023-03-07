@@ -3,6 +3,7 @@ import 'package:hospital_system/core/constant/FreeWidget.dart';
 import 'package:hospital_system/core/constant/color.dart';
 import 'package:hospital_system/features/Cases/Presentaion/View/Widget/TextCustom.dart';
 
+import '../../../../Doctor , Case/Presention/Viwes/Screens/CaseDetails red.dart';
 import 'Medical Measurement.dart';
 import 'MedicalRecord.dart';
 
@@ -22,16 +23,16 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
     tabController =TabController(length: 3, vsync: this,initialIndex: tabViewIndex);
     return SafeArea(
       child: Scaffold(
-        body: Column(
+        body: ListView(
           children: [
             ListTile(
               leading: IconButton(
                 onPressed: (){Navigator.pop(context);},
-                icon: Icon(Icons.chevron_left_outlined,size: 20,color: Colors.black,),
+                icon: const Icon(Icons.chevron_left_outlined,size: 20,color: Colors.black,),
               ),
               title: TextCustom(Title: 'Case Details',fontSize: 18,color: ConstantColor.black2),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
               height: PageSize.height(context)*0.87,
               width: PageSize.width(context),
@@ -53,9 +54,9 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
 
                     child: TabBarView(
                       controller: tabController,
-                      physics: NeverScrollableScrollPhysics(),
-                      children: [
-                        Center(child: Text('sjhdc'),),
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: const [
+                        CaseDetailsred(),
                         MedicalRecord(),
                         MedicalMeasurement(),
                       ],
@@ -90,11 +91,11 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
             primary: tabViewIndex == TabViewIndex
                 ? ConstantColor.lightGreen
                 : ConstantColor.white,
-            side: BorderSide(color: Colors.black26)),
+            side: const BorderSide(color: Colors.black26)),
         child: Center(
           child: Text(
             title,
-            style: TextStyle(color: Colors.black, fontSize: 14),
+            style: const TextStyle(color: Colors.black, fontSize: 12),
           ),
         ),
       ),
