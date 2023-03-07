@@ -8,7 +8,6 @@ import 'package:hospital_system/features/HR-Employee/presentation/views/widget/E
 import 'package:hospital_system/features/HR-Employee/presentation/views/widget/EveryEmployeeList/Manger.dart';
 import 'package:hospital_system/features/HR-Employee/presentation/views/widget/EveryEmployeeList/Nurse.dart';
 import 'package:hospital_system/features/HR-Employee/presentation/views/widget/EveryEmployeeList/Receptionlist.dart';
-import 'package:hospital_system/features/HR-Employee/presentation/views/widget/ListTileCustom.dart';
 import 'package:hospital_system/features/HR-Employee/presentation/views/widget/textFormField.dart';
 
 import 'new HR user.dart';

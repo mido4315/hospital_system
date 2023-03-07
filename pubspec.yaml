@@ -41,6 +41,7 @@ dependencies:
   dropdown_button2:
   dotted_border:
   date_format:
+  roundcheckbox:
 dev_dependencies:
   flutter_test:
     sdk: flutter
