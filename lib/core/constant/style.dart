@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'color.dart';
@@ -87,12 +83,12 @@ class Style {
   static ThemeData englishTheme = ThemeData(
     textTheme: const TextTheme(
         headline1: TextStyle(
-          height: 2,
-          fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.bold,
-          color: Colors.pink,
-          fontSize:18,
-        )),
+      height: 2,
+      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.bold,
+      color: Colors.pink,
+      fontSize:18,
+    )),
     fontFamily: 'PlayfairDisplay',
     backgroundColor: Colors.orange,
     primaryColor: Colors.tealAccent,
@@ -115,4 +111,5 @@ class Style {
     primarySwatch: Colors.purple,
     scaffoldBackgroundColor: Colors.pink,
   );
+
 }
