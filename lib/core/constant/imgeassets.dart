@@ -11,4 +11,16 @@ class ImageAssets{
  static const String calander2  = '$imageRoot/Group 4693.png';
  static const String applogo = '$SignInRoot/applogo.png';
 
+ static const String Task_Details1  = '$imageRoot/Rectangle 1906.png';
+ static const String Task_Details2  = '$imageRoot/NoPath.png';
+ static const String t  = '$imageRoot/Group 2868.png';
+ static const String d1  = '$imageRoot/Group 4472.png';
+ static const String d2 = '$imageRoot/Group 4472 (4).png';
+ static const String d3 = '$imageRoot/Group 4472 (2).png';
+ static const String d4 = '$imageRoot/Group 4472 (3).png';
+ static const String d5 = '$imageRoot/Group 4472 (1).png';
+ static const String complete = '$imageRoot/Group 4462.png';
+
+
+
 }

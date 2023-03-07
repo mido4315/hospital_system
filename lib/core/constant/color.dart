@@ -11,6 +11,9 @@ class ConstantColor {
  static Color orange = const Color(0XFFf17a12);
  static Color lightGreen = const Color(0XFF22C7B8);
  static Color Gray = const Color(0xff828282);
+ static Color white3 = const Color(0xffEFEFEF);
+ static Color blue = const Color(0xff22C7B8);
+ static Color gray = const Color(0xfff2f2f2);
 
 
 }
