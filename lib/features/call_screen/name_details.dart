@@ -3,8 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../core/constant/color.dart';
-import '../core/constant/style.dart';
+import '../../core/constant/color.dart';
+import '../../core/constant/style.dart';
 
 
 Widget name_details(width)

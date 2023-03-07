@@ -7,7 +7,7 @@ import 'package:hospital_system/core/constant/style.dart';
 import 'package:hospital_system/widget/Button_Execution.dart';
 import 'package:hospital_system/widget/check_box_details.dart';
 import 'package:hospital_system/widget/commant_task.dart';
-import 'package:hospital_system/widget/name_details.dart';
+import 'package:hospital_system/features/call_screen/name_details.dart';
 
 class task_details extends StatelessWidget {
   const task_details({Key? key}) : super(key: key);
