@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           primaryColor: const Color(0xff22C7B8),
           fontFamily: 'Poppins'
       ),
-      home:CaseTabDetails(),
+      home:SplashView(),
 
 
       //const SplashView(),
