@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'features/splash/presentation/views/splash_view.dart';
-import 'features/tasks/presentation/views/task_view.dart';
+import 'package:hospital_system/core/constant/color.dart';
+import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
+import 'package:hospital_system/features/profile/presentation/views/profile.dart';
+import 'features/sign In/presentation/views/SginIn.dart';
+//import 'features/splash/presentation/views/splash_view.dart';
+import 'features/profile/presentation/views/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Hospital System',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: ConstantColor.lightGreen,
+        fontFamily: 'Poppins'
       ),
-      home: const task_view()
-      //SplashView(),
+      home: const SignIn(),
     );
   }
 }
