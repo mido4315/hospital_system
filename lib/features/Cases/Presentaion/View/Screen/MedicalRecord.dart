@@ -5,7 +5,7 @@ import 'package:hospital_system/core/constant/imgeassets.dart';
 import 'package:hospital_system/features/Cases/Presentaion/View/Widget/TextCustom.dart';
 
 class MedicalRecord extends StatefulWidget {
-  const MedicalRecord({Key? key, required record, String? state}) : super(key: key);
+  const MedicalRecord({Key? key, String? state}) : super(key: key);
 
   @override
   State<MedicalRecord> createState() => _MedicalRecordState();

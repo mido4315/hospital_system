@@ -7,6 +7,7 @@ import '../../../../Cases/Presentaion/View/Screen/MedicalRecord.dart';
 import '../../../../Select Doctor/presentation/views/Select_Doctor.dart';
 import '../../../../addmeasurement/Presentation/screen/addmeasurement.dart';
 import '../../../../addmedicalrecord/Presentation/screen/addmedicalrecord.dart';
+import '../../../../karimmm/MedicalRecord.dart';
 import '../../../../splash - prototype map/presentation/views/splash_view.dart';
 import 'CaseDetails.dart';
 import 'Cases.dart';
@@ -301,9 +302,9 @@ class _DetailsSheetState extends State<DetailsSheet> {
           ),
           onPressed: () {
             if(ispressed==true|| ispressed==record){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecord(record: record,)));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecordtext(Mystate: "${record}",)));
             }else if(ispressed==false || ispressed==measurement){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecord(record: measurement,)));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecordtext(Mystate:"${measurement}")));
             }
           },
           child: Text('Request'))

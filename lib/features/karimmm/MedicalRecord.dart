@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 class MedicalRecordtext extends StatelessWidget {
-    const MedicalRecordtext({required this.record,}) ;
-  final String record;
+    const MedicalRecordtext({required this.Mystate,}) ;
+  final String Mystate;
 
 
   @override
