@@ -44,7 +44,7 @@ Widget defaultFormField(
       decoration:  InputDecoration(
         border: OutlineInputBorder( borderRadius:BorderRadius.circular(8)),
         isDense: true,                      // Added this
-        contentPadding:  EdgeInsets.only(bottom:size_b!),
+        contentPadding:  EdgeInsets.only(bottom:size_b),
         hintText:hintText ,
         // hintStyle: const TextStyle(
         //   fontSize: 14,
