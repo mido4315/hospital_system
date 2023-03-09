@@ -13,14 +13,9 @@ import 'CaseDetails.dart';
 import 'Cases.dart';
 import 'TextWIDGET.dart';
 
-class CaseDetailsred extends StatefulWidget {
+class CaseDetailsred extends StatelessWidget {
    const CaseDetailsred({Key? key}) : super(key: key);
 
-  @override
-  State<CaseDetailsred> createState() => _CaseDetailsredState();
-}
-
-class _CaseDetailsredState extends State<CaseDetailsred> {
   void _showmodelbottomsheet(BuildContext context) {
     showBottomSheet(
         backgroundColor: Colors.transparent,
@@ -187,6 +182,7 @@ class _CaseDetailsredState extends State<CaseDetailsred> {
     );
   }
 }
+
 
 class DetailsSheet extends StatefulWidget {
   const DetailsSheet({

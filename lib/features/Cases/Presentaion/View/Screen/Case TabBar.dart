@@ -23,15 +23,30 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
     tabController =TabController(length: 3, vsync: this,initialIndex: tabViewIndex);
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Text(
+              'Cases',
+              style: TextStyle(color: Color(0xFFA9A9A9)),
+            ),
+          ),
+          centerTitle: true,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back_sharp,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: ListView(
           children: [
-            ListTile(
-              leading: IconButton(
-                onPressed: (){Navigator.pop(context);},
-                icon: const Icon(Icons.chevron_left_outlined,size: 20,color: Colors.black,),
-              ),
-              title: TextCustom(Title: 'Case Details',fontSize: 18,color: ConstantColor.black2),
-            ),
+
             const SizedBox(height: 20,),
             Container(
               height: PageSize.height(context)*0.87,
