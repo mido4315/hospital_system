@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/core/constant/Provider_Data.dart';
+import 'package:hospital_system/features/Cases/Presentaion/View/Screen/MedicalRecord.dart';
 import 'package:hospital_system/features/Main/presentation/view/screens/main_page.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
+import 'package:hospital_system/features/karimmm/presentation/view/screens/MedicalRecord.dart';
 import 'package:hospital_system/features/profile/presentation/views/screens/profile.dart';
 import 'package:provider/provider.dart';
 import 'features/Cases/Presentaion/View/Screen/Case_TabBar_Details.dart';
