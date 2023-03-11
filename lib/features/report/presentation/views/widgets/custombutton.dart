@@ -9,7 +9,7 @@ class CustomButton extends StatelessWidget {
     required this.color,
     required this.onPressed,
     required this.style,
-    this.width=double.infinity,
+    this.width,
     this.height=45,
     this.radius=10,
     this.icon,
@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
   final String label;
   final Color color;
   TextStyle? style;
-  double width;
+  double? width = 150;
   double height;
   double radius;
   IconData? icon;
@@ -33,7 +33,7 @@ class CustomButton extends StatelessWidget {
     return  ElevatedButton(
       style: ElevatedButton.styleFrom(
       backgroundColor: color,
-      fixedSize:  Size(width,height),
+      fixedSize:  Size(200,height),
         shape: RoundedRectangleBorder(
           side: BorderSide(color: borderColor ,width: borderWidth),
             borderRadius: BorderRadius.circular(radius)),

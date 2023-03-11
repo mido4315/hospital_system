@@ -12,17 +12,26 @@ class MedicalRecord extends StatefulWidget {
 }
 
 class _MedicalRecordState extends State<MedicalRecord> {
-  bool aaa =false;
-  bool bbb =false;
+  bool aaa = false;
+  bool bbb = false;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ListTile(
-          leading: Image(image: AssetImage('${ImageAssets.EmployeeImage}/e3.png'),),
-          title: TextCustom(Title: 'Aml Ezzat',color: Colors.black,fontSize: 14),
-          subtitle: TextCustom(Title:'Specialist - Nurse',color: ConstantColor.lightGreen,fontSize: 14, ),
-          trailing: TextCustom(Title: '13 Mar 2020',color: Colors.black54,fontSize: 12),
+          leading: const Image(
+            image: AssetImage('${ImageAssets.EmployeeImage}/e3.png'),
+          ),
+          title:
+              TextCustom(Title: 'Aml Ezzat', color: Colors.black, fontSize: 14),
+          subtitle: TextCustom(
+            Title: 'Specialist - Nurse',
+            color: ConstantColor.lightGreen,
+            fontSize: 14,
+          ),
+          trailing: TextCustom(
+              Title: '13 Mar 2020', color: Colors.black54, fontSize: 12),
         ),
         TextCustom(
             Title: '''Details note : Lorem Ipsum is simply dummy text of 
@@ -31,23 +40,38 @@ printing and typesetting industry.Lorem Ipsum''',
             fontSize: 14),
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Align(alignment: Alignment.centerLeft,child: TextCustom(Title: 'Medical Record', color: Colors.black, fontSize: 18)),
+          child: Align(
+              alignment: Alignment.centerLeft,
+              child: TextCustom(
+                  Title: 'Medical Record', color: Colors.black, fontSize: 18)),
         ),
-        MedicalListTile(title: 'Blood pressure',iconboolean: aaa,function: (){aaa=!aaa;}),
-        MedicalListTile(title: 'Sugar analysis',iconboolean: bbb,function: (){bbb=!bbb;}),
-
+        MedicalListTile(
+            title: 'Blood pressure',
+            iconboolean: aaa,
+            function: () {
+              aaa = !aaa;
+            }),
+        MedicalListTile(
+            title: 'Sugar analysis',
+            iconboolean: bbb,
+            function: () {
+              bbb = !bbb;
+            }),
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image(
+              const Image(
                 image: AssetImage('assets/Cases/medical.png'),
               ),
               IconButton(
                 onPressed: () {
-                  Show.snackBar(context: context, content: 'Download Medical Record',duration: 1);
+                  Show.snackBar(
+                      context: context,
+                      content: 'Download Medical Record',
+                      duration: 1);
                 },
                 icon: Icon(
                   Icons.download,
@@ -57,18 +81,21 @@ printing and typesetting industry.Lorem Ipsum''',
             ],
           ),
         ),
-        SizedBox(height: PageSize.height(context)*0.19,),
+        SizedBox(
+          height: PageSize.height(context) * 0.1,
+        ),
         ElevatedButton(
           onPressed: () {
-            Show.snackBar(context: context, content: 'Delete Case',duration: 1);
+            Show.snackBar(
+                context: context, content: 'Delete Case', duration: 1);
           },
-          style: ElevatedButton.styleFrom(
-            primary: Colors.red
-          ),
+          style: ElevatedButton.styleFrom(primary: Colors.red),
           child: Container(
             height: 50,
             width: PageSize.width(context) * 0.85,
-            child: Center(child: TextCustom(Title: 'End Case',color: Colors.white,fontSize: 15)),
+            child: Center(
+                child: TextCustom(
+                    Title: 'End Case', color: Colors.white, fontSize: 15)),
           ),
         ),
       ],
@@ -91,7 +118,7 @@ printing and typesetting industry.Lorem Ipsum''',
           color: ConstantColor.lightGreen,
         ),
       ),
-      title: TextCustom(Title: title,color: Colors.black,fontSize: 14),
+      title: TextCustom(Title: title, color: Colors.black, fontSize: 14),
     );
   }
 }

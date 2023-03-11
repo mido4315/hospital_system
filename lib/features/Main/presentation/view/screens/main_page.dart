@@ -21,7 +21,7 @@ class mainPage extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              CustomAppBar(),
+              const CustomAppBar(),
               Row(
                 children: [
                   Padding(
@@ -48,11 +48,11 @@ class mainPage extends StatelessWidget {
                             ConColor: provider_data.Prototype == 0 ||
                                 provider_data.Prototype == 1 ||
                                 provider_data.Prototype == 2
-                                ? Color(0xff5F9EDC)
+                                ? const Color(0xff5F9EDC)
                                 : provider_data.Prototype == 3 ||
                                 provider_data.Prototype == 4
-                                ? Color(0xff5F9EDC)
-                                : Color(0xffDC915F),
+                                ? const Color(0xff5F9EDC)
+                                : const Color(0xffDC915F),
                             IconImage: provider_data.Prototype == 4 ||
                                 provider_data.Prototype == 3
                                 ? 'images/FingerPrint/shield.png'
@@ -73,7 +73,7 @@ class mainPage extends StatelessWidget {
                                 provider_data.Prototype == 4
                                 ? (Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => Cases(),
+                                builder: (context) => const Cases(),
                               ),
                             ))
                                 : (Navigator.of(context).push(
@@ -197,7 +197,7 @@ class mainPage extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color(0xffDC915F),
+                            color: const Color(0xffDC915F),
                           ),
                           width: 360,
                           height: 140,
@@ -214,14 +214,14 @@ class mainPage extends StatelessWidget {
                                       provider_data.Prototype == 2
                                       ? 'Cases'
                                       : 'Employee',
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               ),
                               Container(
                                 width: 100,
                                 height: 100,
                                 decoration: BoxDecoration(
-                                    color: Color(0xffDC915F),
+                                    color: const Color(0xffDC915F),
                                     borderRadius: BorderRadius.circular(20),
                                     border: Border.all(color: Colors.white)),
                                 child: Image.asset(

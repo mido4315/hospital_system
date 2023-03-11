@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../../../notifications/presentation/views/notifications.dart';
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
@@ -13,14 +15,16 @@ class CustomAppBar extends StatelessWidget {
           child: Image.asset('images/FingerPrint/MaskGroup2.png'),
         ),
       ),
-      title: Text('Ebrahem Elzainy'),
-      subtitle: Text('Specialist , Doctor'
+      title: const Text('Ebrahem Elzainy'),
+      subtitle: const Text('Specialist , Doctor'
       ,style: TextStyle(
           color: Color(0xFF22C7B8)
         ),),
       trailing: IconButton(
-        icon: Icon(Icons.notification_add),
-        onPressed: () {},
+        icon: const Icon(Icons.notification_add),
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Notifications(),));
+        },
       ),
     );
   }

@@ -78,6 +78,7 @@ flutter:
      - assets/profile_screen/
      - images/FingerPrint/
      - images/
+     - assets/Cases/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

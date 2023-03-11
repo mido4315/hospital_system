@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/core/constant/Provider_Data.dart';
-import 'package:hospital_system/features/Cases/Presentaion/View/Screen/MedicalRecord.dart';
-import 'package:hospital_system/features/Main/presentation/view/screens/main_page.dart';
-import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Screens/Attendance%20and%20Leaving_Screen.dart';
-import 'package:hospital_system/features/karimmm/presentation/view/screens/MedicalRecord.dart';
-import 'package:hospital_system/features/profile/presentation/views/screens/profile.dart';
+
 import 'package:provider/provider.dart';
-import 'features/Cases/Presentaion/View/Screen/Case_TabBar_Details.dart';
-import 'features/HR-Employee/presentation/views/Employee Lists.dart';
-import 'features/HR-Employee/presentation/views/new HR user.dart';
-import 'features/profile/presentation/views/screens/profile.dart';
-import 'features/report/presentation/views/create_report.dart';
+
 import 'features/splash - prototype map/presentation/views/splash_view.dart';
 
 void main() {
@@ -29,7 +21,7 @@ class MyApp extends StatelessWidget {
           primaryColor: const Color(0xff22C7B8),
           fontFamily: 'Poppins'
       ),
-      home:SplashView(),
+      home:const SplashView(),
 
 
       //const SplashView(),

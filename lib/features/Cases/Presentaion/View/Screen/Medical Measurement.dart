@@ -85,7 +85,7 @@ printing and typesetting industry.Lorem Ipsum''',
         //   ),
         // ),
         SizedBox(
-          height: PageSize.height(context) * 0.3,
+          height: PageSize.height(context) * 0.315,
         ),
         ElevatedButton(
           onPressed: () {
