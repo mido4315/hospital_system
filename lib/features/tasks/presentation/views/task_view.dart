@@ -64,7 +64,9 @@ class _task_viewState extends State<task_view> {
               Type_task(Style.styleO, ConstantColor.green, "Task Name",
                   "$birthDate", ConstantColor.green, "Finshed "),
               Type_task(Style.style4, ConstantColor.orange, "Task Name",
-                  "$birthDate", ConstantColor.green, "Proceess")
+                  "$birthDate", ConstantColor.green, "Proceess"),
+              Type_task(Style.styleO, ConstantColor.green, "Task Name",
+                  "$birthDate", ConstantColor.green, "Finshed "),
             ],
           ),
         ],

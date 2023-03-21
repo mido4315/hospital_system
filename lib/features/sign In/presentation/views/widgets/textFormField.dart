@@ -21,12 +21,12 @@ class Textformfield extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
             color: Colors.black26
         ),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
                 color: Colors.redAccent
             )
         ),
@@ -36,7 +36,7 @@ class Textformfield extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
                 color: Colors.black26
             )
         ),

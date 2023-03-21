@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../../../core/constant/color.dart';
-import '../../../Main/presentation/view/screens/main_page.dart';
-import '../../../attendance and leaving/Presentation/Views/Screens/Attendance and Leaving_Screen.dart';
-import '../../../attendance and leaving/Presentation/Views/Screens/Registered_Screen.dart';
 import '../../../sign In/presentation/views/SginIn.dart';
 import 'widgets/custom_gradient_background.dart';
 import 'package:hospital_system/core/constant/Provider_Data.dart';
+
+import 'widgets/roles_custom_button.dart';
 
 class PrototypeMap extends StatefulWidget {
   const PrototypeMap({Key? key}) : super(key: key);
@@ -57,7 +55,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SignIn(),
+                              builder: (context) =>  SignIn(),
                             ),
                           );
                           setState(() {
@@ -70,7 +68,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SignIn(),
+                              builder: (context) =>  SignIn(),
                             ),
                           );
                           setState(() {
@@ -83,7 +81,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SignIn(),
+                              builder: (context) => SignIn(),
                             ),
                           );
                           setState(() {
@@ -96,7 +94,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SignIn(),
+                              builder: (context) =>  SignIn(),
                             ),
                           );
                           setState(() {
@@ -109,7 +107,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SignIn(),
+                              builder: (context) =>  SignIn(),
                             ),
                           );
                           setState(() {
@@ -125,7 +123,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                           });
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SignIn(),
+                              builder: (context) =>  SignIn(),
                             ),
                           );
                         },
@@ -143,42 +141,3 @@ class _PrototypeMapState extends State<PrototypeMap> {
   }
 }
 
-class RolesCustomButton extends StatelessWidget {
-  const RolesCustomButton({
-    super.key,
-    required this.role,
-    required this.onPressed,
-  });
-
-  final Function onPressed;
-  final String role;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
-          side: const BorderSide(
-            color: Colors.grey,
-            width: 1.5,
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-        ),
-        onPressed: () {
-          onPressed();
-        },
-        child: Text(
-          role,
-          style: TextStyle(
-              fontSize: 14,
-              color: ConstantColor.lightGreen,
-              fontWeight: FontWeight.w100),
-        ),
-      ),
-    );
-  }
-}
