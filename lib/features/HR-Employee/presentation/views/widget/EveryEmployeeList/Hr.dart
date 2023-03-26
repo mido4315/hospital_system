@@ -10,9 +10,9 @@ class HrTabView extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-
-          ListTileCustom(employeeType: 2),ListTileCustom(employeeType: 2),ListTileCustom(employeeType: 2),
-
+          ListTileCustom(employeeType: 2),
+          ListTileCustom(employeeType: 2),
+          ListTileCustom(employeeType: 2),
         ],
       ),
     );

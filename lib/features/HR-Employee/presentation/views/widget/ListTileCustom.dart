@@ -20,8 +20,8 @@ class ListTileCustom extends StatelessWidget {
           color: ConstantColor.black,
         ),
       ),
-      subtitle: Text('${AllList.EmployeeType[employeeType]}',
-
+      subtitle: Text(
+        '${AllList.EmployeeType[employeeType]}',
         style: TextStyle(
           fontSize: 16,
           color: ConstantColor.Gray,

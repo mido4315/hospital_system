@@ -4,19 +4,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:hospital_system/core/constant/color.dart';
 import 'package:hospital_system/core/constant/style.dart';
 
-
-Widget check_box(textView)
-{
-  return   Column(
+Widget check_box(textView) {
+  return Column(
     children: [
       Row(
         children: [
           // RoundCheckBox(onTap: (selected) {},size: 24,checkedColor: ConstantColor.blue,),
-          SizedBox(width: 5,),
-          Text(textView,style: Style.style5_4,)
+          SizedBox(
+            width: 5,
+          ),
+          Text(
+            textView,
+            style: Style.style5_4,
+          )
         ],
       ),
-      SizedBox(height: 5,)
+      SizedBox(
+        height: 5,
+      )
     ],
   );
 }

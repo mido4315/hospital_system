@@ -12,7 +12,6 @@ class MangerTabView extends StatelessWidget {
         children: [
           ListTileCustom(employeeType: 4),
           ListTileCustom(employeeType: 4),
-
         ],
       ),
     );

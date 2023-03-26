@@ -23,7 +23,8 @@ class Registered extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 20, ),
+                          vertical: 20,
+                        ),
                         child: Container(
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
@@ -31,7 +32,11 @@ class Registered extends StatelessWidget {
                                   color: const Color(0xFFffffff), width: 2)),
                           child: const CircleAvatar(
                             backgroundColor: Colors.transparent,
-                            child: Icon(Icons.check,size: 120,color: Color(0xFFffffff),),
+                            child: Icon(
+                              Icons.check,
+                              size: 120,
+                              color: Color(0xFFffffff),
+                            ),
                             radius: 100,
                           ),
                         ),
@@ -58,7 +63,8 @@ class Registered extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: const Color(0xFFffffff), width: 2)),
+                    border:
+                        Border.all(color: const Color(0xFFffffff), width: 2)),
                 child: const CircleAvatar(
                   backgroundColor: Colors.transparent,
                   child: Icon(

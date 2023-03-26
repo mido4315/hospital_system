@@ -3,21 +3,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
-Widget one_doctor( String amage,  double width,nameDoctor,Specialist)
-{
+Widget one_doctor(String amage, double width, nameDoctor, Specialist) {
   return Container(
-    width:width*.8 ,
+    width: width * .8,
     child: Row(
       children: [
         Image.asset("$amage"),
-        SizedBox(width: 10,),
+        SizedBox(
+          width: 10,
+        ),
         Column(
           children: [
-          Text("$nameDoctor"),
-          SizedBox(height: 5,),
-          Text("Specialist $Specialist")
-        ],),
+            Text("$nameDoctor"),
+            SizedBox(
+              height: 5,
+            ),
+            Text("Specialist $Specialist")
+          ],
+        ),
       ],
     ),
   );

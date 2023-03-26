@@ -77,55 +77,55 @@ class SignIn extends StatelessWidget {
                           height: 70,
                         ),
                         Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Form(
-                              key: formKey,
-                              child: Column(
-                                children: [
-                                  TextformFieldCustom(
-                                    hintText: 'Phone Number',
-                                    passmode: false,
-                                    errorText:
-                                    'The number you entered is not connected to an account.',
-                                    prefix: Icon(
-                                      Icons.phone_outlined,
-                                      color: ConstantColor.lightGreen,
-                                    ),
-                                    onChanged: (value) {
-                                      context
-                                          .read<SignInCubit>()
-                                          .emailChanged(value);
-
-                                    },
+                          padding: const EdgeInsets.all(8.0),
+                          child: Form(
+                            key: formKey,
+                            child: Column(
+                              children: [
+                                TextformFieldCustom(
+                                  hintText: 'Phone Number',
+                                  passmode: false,
+                                  errorText:
+                                      'The number you entered is not connected to an account.',
+                                  prefix: Icon(
+                                    Icons.phone_outlined,
+                                    color: ConstantColor.lightGreen,
                                   ),
-                                  const SizedBox(
-                                    height: 20,
+                                  onChanged: (value) {
+                                    context
+                                        .read<SignInCubit>()
+                                        .emailChanged(value);
+                                  },
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                TextformFieldCustom(
+                                  passmode: true,
+                                  hintText: 'Password',
+                                  errorText:
+                                      'The password that you have entered is incorrect.',
+                                  prefix: Icon(
+                                    Icons.lock_outline,
+                                    color: ConstantColor.lightGreen,
                                   ),
-                                  TextformFieldCustom(
-                                    passmode: true,
-                                    hintText: 'Password',
-                                    errorText:
-                                    'The password that you have entered is incorrect.',
-                                    prefix: Icon(
-                                      Icons.lock_outline,
-                                      color: ConstantColor.lightGreen,
-                                    ),
-                                    onChanged: (value) {
-                                      context
-                                          .read<SignInCubit>()
-                                          .passwordChanged(value);
-                                    },
-                                  ),
-                                ],
-                              ),
+                                  onChanged: (value) {
+                                    context
+                                        .read<SignInCubit>()
+                                        .passwordChanged(value);
+                                  },
+                                ),
+                              ],
                             ),
+                          ),
                         ),
                         const SizedBox(
                           height: 50,
                         ),
                         ElevatedButton(
                           onPressed: () async {
-                            Future<bool?> status = SignInCubit().login(state.email,state.password);
+                            Future<bool?> status = SignInCubit()
+                                .login(state.email, state.password);
                             if (await status == true) {
                               Show.snackBar(
                                   context: context,
@@ -147,10 +147,10 @@ class SignIn extends StatelessWidget {
                             width: PageSize.width(context) * 0.9,
                             child: const Center(
                                 child: Text(
-                                  'Login',
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                )),
+                              'Login',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            )),
                           ),
                         )
                       ],

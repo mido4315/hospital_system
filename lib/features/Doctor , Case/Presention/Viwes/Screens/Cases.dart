@@ -84,7 +84,9 @@ class Cases extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size(280, 50),
@@ -93,7 +95,9 @@ class Cases extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           )),
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => CaseTabView(),));
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => CaseTabView(),
+                        ));
                       },
                       child: const Text('Show Details'))
                 ],
@@ -151,7 +155,9 @@ class Cases extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size(280, 50),
@@ -216,7 +222,9 @@ class Cases extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size(280, 50),

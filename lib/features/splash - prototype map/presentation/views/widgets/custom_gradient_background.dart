@@ -15,7 +15,7 @@ class CustomGradientBackground extends StatelessWidget {
           child: Container(
             height: 268,
             width: 268,
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(110),
               ),
@@ -28,7 +28,6 @@ class CustomGradientBackground extends StatelessWidget {
                     const Color(0xff22C7B8).withOpacity(0.05),
                     const Color(0xff22C7B8).withOpacity(0.005),
                     const Color(0xff22C7B8).withOpacity(0.0),
-
                   ]),
             ),
           ),
@@ -39,13 +38,12 @@ class CustomGradientBackground extends StatelessWidget {
           child: Container(
             height: 268,
             width: 268,
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(110),
               ),
               gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
-
                   end: Alignment.topCenter,
                   colors: [
                     const Color(0xff22C7B8).withOpacity(0.15),
@@ -53,7 +51,6 @@ class CustomGradientBackground extends StatelessWidget {
                     const Color(0xff22C7B8).withOpacity(0.05),
                     const Color(0xff22C7B8).withOpacity(0.005),
                     const Color(0xff22C7B8).withOpacity(0.0),
-
                   ]),
             ),
           ),

@@ -10,17 +10,18 @@ class validator {
     return null;
   }
 
-  static String? valditorPhone({required  String phone}) {
+  static String? valditorPhone({required String phone}) {
     if (phone == null) {
       return null;
     }
     if (phone.isEmpty) {
       return "please enter the phone number";
-    } else if (phone.length==12) {
+    } else if (phone.length == 12) {
       return "please enter the correct phone number ";
     }
     return null;
   }
+
   static String? valditorAge({required String age}) {
     if (age == null) {
       return null;
@@ -37,6 +38,4 @@ class validator {
     }
     return null;
   }
-
 }
-

@@ -14,17 +14,14 @@ import 'Cases.dart';
 import 'TextWIDGET.dart';
 
 class CaseDetailsred extends StatelessWidget {
-   const CaseDetailsred({Key? key}) : super(key: key);
+  const CaseDetailsred({Key? key}) : super(key: key);
 
   void _showmodelbottomsheet(BuildContext context) {
     showBottomSheet(
         backgroundColor: Colors.transparent,
         enableDrag: true,
         context: context,
-        builder: (context) =>
-            SingleChildScrollView(child: DetailsSheet(
-
-            )));
+        builder: (context) => SingleChildScrollView(child: DetailsSheet()));
   }
 
   @override
@@ -106,83 +103,77 @@ class CaseDetailsred extends StatelessWidget {
             SizedBox(
                 width: 152,
                 height: 45,
-                child: Provider
-                    .of<Provider_data>(context)
-                    .Prototype == 2
+                child: Provider.of<Provider_data>(context).Prototype == 2
                     ? ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        primary: Color(0xFF22C7B8)),
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            Select_Doctor('Select Analysis employee'),));
-                    },
-                    child: Row(
-                      children: const [
-                        Icon(
-                          Icons.add,
-                          size: 40,
-                        ),
-                        Text(
-                          'Add Nurse',
-                        ),
-                      ],
-                    ))
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            primary: Color(0xFF22C7B8)),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                Select_Doctor('Select Analysis employee'),
+                          ));
+                        },
+                        child: Row(
+                          children: const [
+                            Icon(
+                              Icons.add,
+                              size: 40,
+                            ),
+                            Text(
+                              'Add Nurse',
+                            ),
+                          ],
+                        ))
                     : SizedBox()),
             SizedBox(
                 width: 150,
                 height: 45,
-                child: Provider
-                    .of<Provider_data>(context)
-                    .Prototype == 2
+                child: Provider.of<Provider_data>(context).Prototype == 2
                     ? ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        primary: Color(0xFF22C7B8)),
-                    onPressed: () {
-                      _showmodelbottomsheet(context);
-                    },
-                    child: Row(
-                      children: const [
-                        Icon(
-                          Icons.add,
-                          size: 40,
-                        ),
-                        Text(
-                          'Request',
-                        ),
-                      ],
-                    ))
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            primary: Color(0xFF22C7B8)),
+                        onPressed: () {
+                          _showmodelbottomsheet(context);
+                        },
+                        child: Row(
+                          children: const [
+                            Icon(
+                              Icons.add,
+                              size: 40,
+                            ),
+                            Text(
+                              'Request',
+                            ),
+                          ],
+                        ))
                     : SizedBox()),
           ],
         ),
         SizedBox(
           height: 150,
         ),
-        Provider
-            .of<Provider_data>(context)
-            .Prototype == 2
+        Provider.of<Provider_data>(context).Prototype == 2
             ? ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              minimumSize: Size(370, 53),
-              primary: Color(0xFFE63A3A),
-            ),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Cases()));
-            },
-            child: Text('End Case'))
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  minimumSize: Size(370, 53),
+                  primary: Color(0xFFE63A3A),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Cases()));
+                },
+                child: Text('End Case'))
             : SizedBox()
       ],
     );
   }
 }
-
 
 class DetailsSheet extends StatefulWidget {
   const DetailsSheet({
@@ -195,117 +186,139 @@ class DetailsSheet extends StatefulWidget {
 
 class _DetailsSheetState extends State<DetailsSheet> {
   String selected = "first";
-  Color color= Colors.grey;
-  bool ispressed=true;
-  String ?record;
-  String ?measurement;
+  Color color = Colors.grey;
+  bool ispressed = true;
+  String? record;
+  String? measurement;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-    decoration:
-    ShapeDecoration(color:Color(0xFFEAEAEA),
-    shape:
-    RoundedRectangleBorder(
-    borderRadius: BorderRadius.only(
-    topRight: Radius.circular(28),
-    topLeft: Radius.circular(28)
-    )
-    )),
-    height: 290,
-    child: Column(
-    // mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: [
-    Divider(
-    indent: 150,
-    endIndent: 150,
-    thickness: 5,
-    color: Colors.grey,
-    ),
-    SizedBox(height: 30,),
-    Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-    GestureDetector(
-      onTap: (){
-        setState(() {
-          ispressed=!ispressed;
-
-        });
-
-      },
-      child: Container(
-        child:
-        Column(mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.medical_services_outlined,size: 50,
-            color:ispressed? Color(0xFF22C7B8):Colors.grey,),
-            SizedBox(height: 10,),
-            Text("medical record",style: TextStyle(
-              color: ispressed? Color(0xFF22C7B8):Colors.grey,
-            ),)
-          ],
-        ),
-      height: 130,
-      width: 180,
-      decoration:BoxDecoration(
-      color: Colors.transparent,
-      border: Border.all(
-      color:ispressed? Color(0xFF22C7B8):Colors.grey,
-      width: 2
-      )
-      ),
-      ),
-    ),
-      GestureDetector(
-        onTap: (){
-          setState(() {
-            ispressed=!ispressed;
-          });
-        },
-        child: Container(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center,
+      decoration: ShapeDecoration(
+          color: Color(0xFFEAEAEA),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(28),
+                  topLeft: Radius.circular(28)))),
+      height: 290,
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Divider(
+            indent: 150,
+            endIndent: 150,
+            thickness: 5,
+            color: Colors.grey,
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(Icons.timelapse_rounded,size: 50,
-                  color:ispressed? Colors.grey:Color(0xFF22C7B8),),
-              SizedBox(height: 5,),
-              Text("medical Measurement",style: TextStyle(fontSize: 13,
-                  color: ispressed? Colors.grey:Color(0xFF22C7B8),)
-              )],
-          ),
-          height: 130,
-          width: 180,
-          decoration:BoxDecoration(
-              color: Colors.transparent,
-              border: Border.all(
-                  color: ispressed? Colors.grey:Color(0xFF22C7B8),
-                  width: 2
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    ispressed = !ispressed;
+                  });
+                },
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.medical_services_outlined,
+                        size: 50,
+                        color: ispressed ? Color(0xFF22C7B8) : Colors.grey,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "medical record",
+                        style: TextStyle(
+                          color: ispressed ? Color(0xFF22C7B8) : Colors.grey,
+                        ),
+                      )
+                    ],
+                  ),
+                  height: 130,
+                  width: 180,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      border: Border.all(
+                          color: ispressed ? Color(0xFF22C7B8) : Colors.grey,
+                          width: 2)),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    ispressed = !ispressed;
+                  });
+                },
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.timelapse_rounded,
+                        size: 50,
+                        color: ispressed ? Colors.grey : Color(0xFF22C7B8),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text("medical Measurement",
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: ispressed ? Colors.grey : Color(0xFF22C7B8),
+                          ))
+                    ],
+                  ),
+                  height: 130,
+                  width: 180,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      border: Border.all(
+                          color: ispressed ? Colors.grey : Color(0xFF22C7B8),
+                          width: 2)),
+                ),
               )
+            ],
           ),
-        ),
-      )
-    ],
-    ),
-      SizedBox(height: 50,),
-      ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)),
-            minimumSize: Size(370, 53),
-            primary: Color(0xFF22C7B8),
+          SizedBox(
+            height: 50,
           ),
-          onPressed: () {
-            if(ispressed==true|| ispressed==record){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecordtext(MyState: 'record',)));
-            }else if(ispressed==false || ispressed==measurement){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicalRecordtext(MyState: 'measurment',)));
-            }
-          },
-          child: Text('Request'))
-    ],
-    ),
+          ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                minimumSize: Size(370, 53),
+                primary: Color(0xFF22C7B8),
+              ),
+              onPressed: () {
+                if (ispressed == true || ispressed == record) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MedicalRecordtext(
+                                MyState: 'record',
+                              )));
+                } else if (ispressed == false || ispressed == measurement) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MedicalRecordtext(
+                                MyState: 'measurment',
+                              )));
+                }
+              },
+              child: Text('Request'))
+        ],
+      ),
     );
-    }
+  }
 }

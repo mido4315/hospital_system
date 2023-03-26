@@ -15,7 +15,7 @@ class AllTabView extends StatelessWidget {
     return ListView(
       children: List.generate(
         20,
-            (index) {
+        (index) {
           return ListTileCustom(employeeType: x.nextInt(6));
         },
       ),

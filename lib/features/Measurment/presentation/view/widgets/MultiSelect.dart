@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class MultiSelect extends StatefulWidget {
   final List<String> items;
   const MultiSelect({Key? key, required this.items}) : super(key: key);
@@ -16,7 +17,6 @@ class _MultiSelectState extends State<MultiSelect> {
     setState(() {
       if (isSelected) {
         _selectedItems.add(itemValue);
-
       } else {
         _selectedItems.remove(itemValue);
       }
@@ -41,11 +41,11 @@ class _MultiSelectState extends State<MultiSelect> {
         child: ListBody(
           children: widget.items
               .map((item) => CheckboxListTile(
-            value: _selectedItems.contains(item),
-            title: Text(item),
-            controlAffinity: ListTileControlAffinity.leading,
-            onChanged: (isChecked) => _itemChange(item, isChecked!),
-          ))
+                    value: _selectedItems.contains(item),
+                    title: Text(item),
+                    controlAffinity: ListTileControlAffinity.leading,
+                    onChanged: (isChecked) => _itemChange(item, isChecked!),
+                  ))
               .toList(),
         ),
       ),
@@ -62,5 +62,3 @@ class _MultiSelectState extends State<MultiSelect> {
     );
   }
 }
-
-

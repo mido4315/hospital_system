@@ -38,49 +38,49 @@ class mainPage extends StatelessWidget {
                             MeniContainerHeight: 100,
                             MeniContainerWidth: 100,
                             ContainerText: provider_data.Prototype == 0 ||
-                                provider_data.Prototype == 1 ||
-                                provider_data.Prototype == 2
+                                    provider_data.Prototype == 1 ||
+                                    provider_data.Prototype == 2
                                 ? 'Calls'
                                 : provider_data.Prototype == 3 ||
-                                provider_data.Prototype == 4
-                                ? 'Cases'
-                                : 'Employee',
+                                        provider_data.Prototype == 4
+                                    ? 'Cases'
+                                    : 'Employee',
                             ConColor: provider_data.Prototype == 0 ||
-                                provider_data.Prototype == 1 ||
-                                provider_data.Prototype == 2
+                                    provider_data.Prototype == 1 ||
+                                    provider_data.Prototype == 2
                                 ? const Color(0xff5F9EDC)
                                 : provider_data.Prototype == 3 ||
-                                provider_data.Prototype == 4
-                                ? const Color(0xff5F9EDC)
-                                : const Color(0xffDC915F),
+                                        provider_data.Prototype == 4
+                                    ? const Color(0xff5F9EDC)
+                                    : const Color(0xffDC915F),
                             IconImage: provider_data.Prototype == 4 ||
-                                provider_data.Prototype == 3
+                                    provider_data.Prototype == 3
                                 ? 'images/FingerPrint/shield.png'
                                 : provider_data.Prototype == 5
-                                ? 'images/FingerPrint/Empolyees.png'
-                                : 'images/FingerPrint/add.png',
+                                    ? 'images/FingerPrint/Empolyees.png'
+                                    : 'images/FingerPrint/add.png',
                           ),
                           onTap: () {
                             provider_data.Prototype == 0 ||
-                                provider_data.Prototype == 1 ||
-                                provider_data.Prototype == 2
+                                    provider_data.Prototype == 1 ||
+                                    provider_data.Prototype == 2
                                 ? (Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) =>  call(),
-                              ),
-                            ))
+                                    MaterialPageRoute(
+                                      builder: (context) => call(),
+                                    ),
+                                  ))
                                 : provider_data.Prototype == 3 ||
-                                provider_data.Prototype == 4
-                                ? (Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => const Cases(),
-                              ),
-                            ))
-                                : (Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => EmployeeList(),
-                              ),
-                            ));
+                                        provider_data.Prototype == 4
+                                    ? (Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => const Cases(),
+                                        ),
+                                      ))
+                                    : (Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => EmployeeList(),
+                                        ),
+                                      ));
                           },
                         ),
 
@@ -143,7 +143,7 @@ class mainPage extends StatelessWidget {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
-                                const AttendanceandLeaving(),
+                                    const AttendanceandLeaving(),
                               ),
                             );
                           },
@@ -166,32 +166,27 @@ class mainPage extends StatelessWidget {
               ),
               Visibility(
                 visible: provider_data.Prototype == 0 ||
-                    provider_data.Prototype == 2 ||
-                    provider_data.Prototype == 4
+                        provider_data.Prototype == 2 ||
+                        provider_data.Prototype == 4
                     ? true
                     : false,
                 child: GestureDetector(
-
                   onTap: () {
-                    provider_data.Prototype == 0 ||
-                        provider_data.Prototype == 2
-                        ?
-                    (Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const Cases(),
-                      ),
-                    ))
+                    provider_data.Prototype == 0 || provider_data.Prototype == 2
+                        ? (Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const Cases(),
+                            ),
+                          ))
                         : (Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => EmployeeList(),
-                      ),
-                    ));
+                            MaterialPageRoute(
+                              builder: (context) => EmployeeList(),
+                            ),
+                          ));
                   },
                   child: Padding(
-                    padding: EdgeInsets.all(MediaQuery
-                        .of(context)
-                        .size
-                        .width * 0.04),
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.04),
                     child: Stack(
                       children: <Widget>[
                         Container(
@@ -211,7 +206,7 @@ class mainPage extends StatelessWidget {
                                 padding: const EdgeInsets.only(right: 135),
                                 child: Text(
                                   provider_data.Prototype == 0 ||
-                                      provider_data.Prototype == 2
+                                          provider_data.Prototype == 2
                                       ? 'Cases'
                                       : 'Employee',
                                   style: const TextStyle(color: Colors.white),
@@ -226,7 +221,7 @@ class mainPage extends StatelessWidget {
                                     border: Border.all(color: Colors.white)),
                                 child: Image.asset(
                                     provider_data.Prototype == 0 ||
-                                        provider_data.Prototype == 2
+                                            provider_data.Prototype == 2
                                         ? 'images/FingerPrint/shield.png'
                                         : 'images/FingerPrint/Empolyees.png',
                                     scale: 2),

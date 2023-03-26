@@ -36,8 +36,10 @@ class _task_viewState extends State<task_view> {
       // backgroundColor: ConstantColor.white,
       appBar: AppBar(
         leading: IconButton(
-          onPressed: (){Navigator.pop(context);},
-          icon:Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back),
           color: ConstantColor.black3,
         ),
         shadowColor: Colors.transparent,
@@ -56,7 +58,7 @@ class _task_viewState extends State<task_view> {
               SizedBox(
                 height: 10,
               ),
-              SizedBox(width: width * .91, child: Calander(context, a,height)),
+              SizedBox(width: width * .91, child: Calander(context, a, height)),
               Type_task(Style.styleO, ConstantColor.green, "Task Name",
                   "$birthDate", ConstantColor.green, "Finshed "),
               Type_task(Style.style4, ConstantColor.orange, "Task Name",

@@ -87,7 +87,9 @@ class CallerInfo extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 12,),
+            const SizedBox(
+              height: 12,
+            ),
             Text(
               description,
               style: const TextStyle(

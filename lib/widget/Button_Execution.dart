@@ -2,19 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-Widget Button_Excution( width)
-{
-  return  SizedBox(
+Widget Button_Excution(width) {
+  return SizedBox(
       height: 40,
-      width: width*.99,
+      width: width * .99,
       child: ElevatedButton(
-        onPressed: (){
-
-        },
-        style: ElevatedButton.styleFrom
-          (backgroundColor:   const Color(0xff22C7B8)),
-        child:  const Text("Execution")
-        ,
-      )
-  );
+        onPressed: () {},
+        style:
+            ElevatedButton.styleFrom(backgroundColor: const Color(0xff22C7B8)),
+        child: const Text("Execution"),
+      ));
 }

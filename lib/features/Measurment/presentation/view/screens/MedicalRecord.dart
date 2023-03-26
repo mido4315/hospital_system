@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/features/Measurment/presentation/view/widgets/MultiSelect.dart';
 import 'package:hospital_system/features/report/presentation/views/widgets/customtextformfield.dart';
+
 class MedicalRecordtext extends StatefulWidget {
   const MedicalRecordtext({Key? key, required this.MyState}) : super(key: key);
   final String MyState;
@@ -45,13 +46,21 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: widget.MyState=='record'?const Text('Medical Record',
-          style: TextStyle(color: Colors.black),):
-        const Text('Medical Measurment',
-          style: TextStyle(color: Colors.black),),
+        title: widget.MyState == 'record'
+            ? const Text(
+                'Medical Record',
+                style: TextStyle(color: Colors.black),
+              )
+            : const Text(
+                'Medical Measurment',
+                style: TextStyle(color: Colors.black),
+              ),
         leading: IconButton(
-          icon: Icon(Icons.close,color: Colors.black,),
-          onPressed: (){
+          icon: Icon(
+            Icons.close,
+            color: Colors.black,
+          ),
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -66,35 +75,47 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
               children: [
                 // use this button to open the multi-select dialog
                 Wrap(
-                  children:
-                  _selectedItems
-                      .map((e) =>
-                      Padding(
-                        padding: EdgeInsets.only(right: 10),
-                        child: Chip(
-                          backgroundColor: Color(0xff22C7B8),
-                          deleteIconColor: Colors.white,
-                          deleteIcon: Icon(Icons.close),
-                          onDeleted: () => setState(() {
-                            _selectedItems.remove(e);
-                          }),
-                          label: Text(e,style: TextStyle(color: Colors.white),),
-                        ),
-                      ))
+                  children: _selectedItems
+                      .map((e) => Padding(
+                            padding: EdgeInsets.only(right: 10),
+                            child: Chip(
+                              backgroundColor: Color(0xff22C7B8),
+                              deleteIconColor: Colors.white,
+                              deleteIcon: Icon(Icons.close),
+                              onDeleted: () => setState(() {
+                                _selectedItems.remove(e);
+                              }),
+                              label: Text(
+                                e,
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ))
                       .toList(),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Container(
                   width: 200,
                   height: 50,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: Color(0xffFFFFFF)),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xffFFFFFF)),
                     onPressed: _showMultiSelect,
                     child: Row(
                       children: [
-                        Text('Add Measurment',style: TextStyle(color: Colors.grey),),
-                        SizedBox(width: 20,),
-                        Icon(Icons.add,color: Colors.grey,),
+                        Text(
+                          'Add Measurment',
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Icon(
+                          Icons.add,
+                          color: Colors.grey,
+                        ),
                       ],
                     ),
                   ),
@@ -103,14 +124,12 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
                   height: 30,
                 ),
                 CustomTextFormField(
-                    label: 'Add note',
+                  label: 'Add note',
                   maxLine: 3,
                   color: Color(0xffEFEFEF),
-
                 ),
 
                 // display selected items
-
               ],
             ),
             Container(
@@ -120,10 +139,7 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xff22C7B8)),
                     child: const Text('Send'),
-                    onPressed: () {
-
-
-                    })),
+                    onPressed: () {})),
           ],
         ),
       ),

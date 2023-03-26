@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/constant/color.dart';
 
-
 class RolesCustomButton extends StatelessWidget {
   const RolesCustomButton({
     super.key,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class TextWidgets extends StatelessWidget {
   TextWidgets({
     required this.title,
@@ -13,7 +14,7 @@ class TextWidgets extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title,style: TextStyle(color: Colors.grey)),
+          Text(title, style: TextStyle(color: Colors.grey)),
           Text(subtitle),
         ],
       ),

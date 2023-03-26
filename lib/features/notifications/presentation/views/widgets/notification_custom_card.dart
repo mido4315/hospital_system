@@ -52,9 +52,7 @@ class NotificationCustomCard extends StatelessWidget {
                   Text(
                     name,
                     style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w100
-                    ),
+                        fontSize: 14, fontWeight: FontWeight.w100),
                   ),
                   Text(
                     description,

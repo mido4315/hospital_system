@@ -7,10 +7,10 @@ class newformFieldCustom extends StatefulWidget {
       {super.key,
       required this.controller,
       required this.hintText,
-       this.prefix,
+      this.prefix,
       required this.errorText,
-       required this.passmode,
-        required this.iconData,
+      required this.passmode,
+      required this.iconData,
       this.textInputType});
   TextEditingController controller = TextEditingController();
   String hintText;
@@ -31,13 +31,13 @@ class newformFieldCustom_s extends State<newformFieldCustom> {
   Widget build(BuildContext context) {
     return Column(children: [
       Padding(
-        padding: const EdgeInsets.only(left: 5,right: 5),
+        padding: const EdgeInsets.only(left: 5, right: 5),
         child: TextFormField(
           controller: widget.controller,
           keyboardType: widget.textInputType,
           obscureText: passicon,
           decoration: InputDecoration(
-            filled: true,
+              filled: true,
               fillColor: Colors.white,
               hintText: widget.hintText,
               hintStyle: TextStyle(fontSize: 16, color: Colors.black26),
@@ -50,7 +50,10 @@ class newformFieldCustom_s extends State<newformFieldCustom> {
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.black26)),
-              prefixIcon: Icon(widget.iconData,color: ConstantColor.lightGreen,),
+              prefixIcon: Icon(
+                widget.iconData,
+                color: ConstantColor.lightGreen,
+              ),
               suffixIcon: widget.passmode
                   ? passicon
                       ? IconButton(

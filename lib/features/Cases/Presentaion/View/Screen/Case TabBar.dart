@@ -8,7 +8,7 @@ import 'Medical Measurement.dart';
 import 'MedicalRecord.dart';
 
 TabController? tabController;
-int tabViewIndex=0;
+int tabViewIndex = 0;
 
 class CaseTabView extends StatefulWidget {
   const CaseTabView({Key? key}) : super(key: key);
@@ -17,10 +17,12 @@ class CaseTabView extends StatefulWidget {
   State<CaseTabView> createState() => _CaseTabViewState();
 }
 
-class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin{
+class _CaseTabViewState extends State<CaseTabView>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    tabController =TabController(length: 3, vsync: this,initialIndex: tabViewIndex);
+    tabController =
+        TabController(length: 3, vsync: this, initialIndex: tabViewIndex);
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -46,27 +48,28 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
         ),
         body: ListView(
           children: [
-
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
-              height: PageSize.height(context)*0.87,
+              height: PageSize.height(context) * 0.87,
               width: PageSize.width(context),
-             // color: Colors.purple,
+              // color: Colors.purple,
               child: Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButtonTabBar(title: 'Case',TabViewIndex: 0),
-                      ElevatedButtonTabBar(title: 'Medical Record',TabViewIndex: 1),
-                      ElevatedButtonTabBar(title: 'Medical Measurement',TabViewIndex: 2),
+                      ElevatedButtonTabBar(title: 'Case', TabViewIndex: 0),
+                      ElevatedButtonTabBar(
+                          title: 'Medical Record', TabViewIndex: 1),
+                      ElevatedButtonTabBar(
+                          title: 'Medical Measurement', TabViewIndex: 2),
                     ],
                   ),
                   Container(
-
-                    height: PageSize.height(context)*0.8,
+                    height: PageSize.height(context) * 0.8,
                     width: PageSize.width(context),
-
                     child: TabBarView(
                       controller: tabController,
                       physics: const NeverScrollableScrollPhysics(),
@@ -80,12 +83,12 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
                 ],
               ),
             )
-
           ],
         ),
       ),
     );
   }
+
   Widget ElevatedButtonTabBar({
     required int TabViewIndex,
     required String title,
@@ -96,7 +99,7 @@ class _CaseTabViewState extends State<CaseTabView> with TickerProviderStateMixin
         onPressed: () {
           print('sdcsdc');
           setState(
-                () {
+            () {
               tabViewIndex = TabViewIndex;
               print(tabViewIndex);
             },

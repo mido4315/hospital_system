@@ -11,7 +11,9 @@ class ReceptionlistTabView extends StatelessWidget {
       child: Column(
         children: [
           ListTileCustom(employeeType: 3),
-          ListTileCustom(employeeType: 3),ListTileCustom(employeeType: 3),ListTileCustom(employeeType: 3),
+          ListTileCustom(employeeType: 3),
+          ListTileCustom(employeeType: 3),
+          ListTileCustom(employeeType: 3),
         ],
       ),
     );

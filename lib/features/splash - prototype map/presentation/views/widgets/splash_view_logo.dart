@@ -40,7 +40,7 @@ class SplashViewLogo extends StatelessWidget {
           ),
           LinearPercentIndicator(
             alignment: MainAxisAlignment.center,
-            width: width *0.8,
+            width: width * 0.8,
             animation: true,
             animationDuration: 2000,
             backgroundColor: Colors.grey,

@@ -10,12 +10,12 @@ import 'widgets/roles_custom_button.dart';
 class PrototypeMap extends StatefulWidget {
   const PrototypeMap({Key? key}) : super(key: key);
   static const roles = [
-    "Doctor",//0
-    "Receptionist",//1
-    "Nurse",//2
-    "Analysis Employee",//3
-    "Manger",//4
-    "HR",//5
+    "Doctor", //0
+    "Receptionist", //1
+    "Nurse", //2
+    "Analysis Employee", //3
+    "Manger", //4
+    "HR", //5
   ];
 
   @override
@@ -26,7 +26,6 @@ class _PrototypeMapState extends State<PrototypeMap> {
   @override
   Widget build(BuildContext context) {
     return Consumer<Provider_data>(builder: (context, provider_data, child) {
-
       return Scaffold(
         body: Stack(
           children: [
@@ -55,11 +54,11 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) =>  SignIn(),
+                              builder: (context) => SignIn(),
                             ),
                           );
                           setState(() {
-                            provider_data.Prototype=0;
+                            provider_data.Prototype = 0;
                           });
                         },
                       ),
@@ -68,11 +67,11 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) =>  SignIn(),
+                              builder: (context) => SignIn(),
                             ),
                           );
                           setState(() {
-                            provider_data.Prototype=1;
+                            provider_data.Prototype = 1;
                           });
                         },
                       ),
@@ -85,7 +84,7 @@ class _PrototypeMapState extends State<PrototypeMap> {
                             ),
                           );
                           setState(() {
-                            provider_data.Prototype=2;
+                            provider_data.Prototype = 2;
                           });
                         },
                       ),
@@ -94,11 +93,11 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) =>  SignIn(),
+                              builder: (context) => SignIn(),
                             ),
                           );
                           setState(() {
-                            provider_data.Prototype=3;
+                            provider_data.Prototype = 3;
                           });
                         },
                       ),
@@ -107,11 +106,11 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) =>  SignIn(),
+                              builder: (context) => SignIn(),
                             ),
                           );
                           setState(() {
-                            provider_data.Prototype=4;
+                            provider_data.Prototype = 4;
                           });
                         },
                       ),
@@ -119,11 +118,11 @@ class _PrototypeMapState extends State<PrototypeMap> {
                         role: PrototypeMap.roles[5],
                         onPressed: () {
                           setState(() {
-                            provider_data.Prototype=5;
+                            provider_data.Prototype = 5;
                           });
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) =>  SignIn(),
+                              builder: (context) => SignIn(),
                             ),
                           );
                         },
@@ -136,8 +135,6 @@ class _PrototypeMapState extends State<PrototypeMap> {
           ],
         ),
       );
-    }
-    );
+    });
   }
 }
-

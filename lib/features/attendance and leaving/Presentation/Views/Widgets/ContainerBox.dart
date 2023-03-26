@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Screens/TouchID_Sensor_Screen.dart';
+
 class ContainerBox extends StatelessWidget {
   ContainerBox({
     super.key,
@@ -55,7 +56,10 @@ class ContainerBox extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>TouchIDSensor()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TouchIDSensor()));
                   },
                 ),
               ),

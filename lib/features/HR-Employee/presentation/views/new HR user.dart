@@ -125,11 +125,10 @@ class _NewHRuserState extends State<NewHRuser> {
         onPressed: () {
           onpressed();
           print('down');
-          Show.snackBar(context: context, content: 'New User Added',duration: 2);
+          Show.snackBar(
+              context: context, content: 'New User Added', duration: 2);
         },
-        style: ElevatedButton.styleFrom(
-          primary: ConstantColor.lightGreen
-        ),
+        style: ElevatedButton.styleFrom(primary: ConstantColor.lightGreen),
         child: Container(
           height: 50,
           width: PageSize.width(context) * 0.9,

@@ -11,19 +11,18 @@ class FingerPrint extends StatefulWidget {
 }
 
 class _FingerPrintState extends State<FingerPrint> {
-  bool showBiometrics=false;
-  bool isAuthenticated= false;
+  bool showBiometrics = false;
+  bool isAuthenticated = false;
   // main function that will allow us to use the Fingerprint sensor
   @override
   void initState() {
-   super.initState();
-   isBiometricAvailable();
+    super.initState();
+    isBiometricAvailable();
   }
-  isBiometricAvailable()async{
-    showBiometrics =(await BiometricHelper().hasEnrolledBiometrics) as bool;
-    setState(() {
 
-    });
+  isBiometricAvailable() async {
+    showBiometrics = (await BiometricHelper().hasEnrolledBiometrics) as bool;
+    setState(() {});
   }
 
   @override
@@ -34,12 +33,12 @@ class _FingerPrintState extends State<FingerPrint> {
         children: [
           Container(
             child: GestureDetector(
-              onTap: ()async{
-                isAuthenticated =await BiometricHelper().authenticate();
-                if(isAuthenticated){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Registered()));
+              onTap: () async {
+                isAuthenticated = await BiometricHelper().authenticate();
+                if (isAuthenticated) {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => Registered()));
                 }
-
               },
               child: Image.asset(
                 'images/FingerPrint/Group 355.png',
@@ -47,26 +46,27 @@ class _FingerPrintState extends State<FingerPrint> {
               ),
             ),
           ),
-          SizedBox(height: 10,),
-          Text('Please touch ID sensor to verify registration',textAlign: TextAlign.center,style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 13
-          ),),
-
-
-
-    ],
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'Please touch ID sensor to verify registration',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+          ),
+        ],
       ),
     );
   }
 }
+
 class BiometricHelper {
   final LocalAuthentication _auth = LocalAuthentication();
 
   Future<bool> hasEnrolledBiometrics() async {
     final List<BiometricType>? availableBiometric =
-    await _auth.getAvailableBiometrics();
+        await _auth.getAvailableBiometrics();
     if (availableBiometric!.isNotEmpty) {
       return true;
     } else {
@@ -78,10 +78,7 @@ class BiometricHelper {
     final bool didAuthenticate = await _auth.authenticate(
         localizedReason: "Please Authenticte to Procceds",
         options: AuthenticationOptions(
-          biometricOnly: true,
-          stickyAuth: true,
-            useErrorDialogs: true
-        ));
+            biometricOnly: true, stickyAuth: true, useErrorDialogs: true));
     return didAuthenticate;
   }
 }

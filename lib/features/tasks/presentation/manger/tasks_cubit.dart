@@ -5,5 +5,4 @@ part 'tasks_state.dart';
 
 class TasksCubit extends Cubit<TasksState> {
   TasksCubit() : super(TasksInitial());
-
 }

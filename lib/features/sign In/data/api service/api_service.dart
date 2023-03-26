@@ -13,8 +13,8 @@ class APIService {
     required String email,
     required String password,
   }) async {
-    final headers = {"content-type" : "application/json"};
-    final json = jsonEncode({'email' : email,'password': password});
+    final headers = {"content-type": "application/json"};
+    final json = jsonEncode({'email': email, 'password': password});
     Uri url = Uri.parse('$baseUrl$loginPath');
     Response response = await http.post(
       url,

@@ -5,7 +5,6 @@ class TextCustom extends StatelessWidget {
     required this.fontSize,
     required this.Title,
     required this.color,
-
   });
   String? Title;
   Color? color;

@@ -8,7 +8,6 @@ class AllList {
     'e3.png',
     'e4.png',
     'e5.png',
-
   ];
   static List<String> EmployeeName = [
     'Salma Ahmed',
@@ -17,7 +16,6 @@ class AllList {
     'Hend Ali',
     'Ahmed Zain',
     'Islam Mahmoud',
-
   ];
 
   static List<String> EmployeeType = [

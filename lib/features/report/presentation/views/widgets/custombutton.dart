@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomButton extends StatelessWidget {
   CustomButton({
     Key? key,
@@ -10,12 +9,11 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     required this.style,
     this.width,
-    this.height=45,
-    this.radius=10,
+    this.height = 45,
+    this.radius = 10,
     this.icon,
-    this.borderColor=Colors.white,
-    this.borderWidth=0,
-
+    this.borderColor = Colors.white,
+    this.borderWidth = 0,
   }) : super(key: key);
   final String label;
   final Color color;
@@ -29,31 +27,28 @@ class CustomButton extends StatelessWidget {
   final Function? onPressed;
   @override
   Widget build(BuildContext context) {
-
-    return  ElevatedButton(
+    return ElevatedButton(
       style: ElevatedButton.styleFrom(
-      backgroundColor: color,
-      fixedSize:  Size(200,height),
+        backgroundColor: color,
+        fixedSize: Size(200, height),
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: borderColor ,width: borderWidth),
+            side: BorderSide(color: borderColor, width: borderWidth),
             borderRadius: BorderRadius.circular(radius)),
-    ),
-      onPressed:(){
+      ),
+      onPressed: () {
         onPressed!();
       },
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children:[
-        icon!=null?Icon(icon):Text(""),
-          const SizedBox(width: 2,),
-          Text(
-          label ,style: style,textAlign: TextAlign.center,),
+      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+        icon != null ? Icon(icon) : Text(""),
+        const SizedBox(
+          width: 2,
+        ),
+        Text(
+          label,
+          style: style,
+          textAlign: TextAlign.center,
+        ),
       ]),
     );
   }
 }
-
-
-
-
-

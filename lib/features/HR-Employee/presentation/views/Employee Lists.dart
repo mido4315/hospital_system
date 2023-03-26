@@ -32,13 +32,18 @@ class _EmployeeListState extends State<EmployeeList>
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         floatingActionButton: FloatingActionButton(
- backgroundColor: ConstantColor.lightGreen,
-
-          onPressed: (){
-            Show.snackBar(context: context, content: 'Add New Employee',duration: 1);
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>NewHRuser()));
+          backgroundColor: ConstantColor.lightGreen,
+          onPressed: () {
+            Show.snackBar(
+                context: context, content: 'Add New Employee', duration: 1);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => NewHRuser()));
           },
-          child: Icon(Icons.add,color: ConstantColor.white,size: 40,),
+          child: Icon(
+            Icons.add,
+            color: ConstantColor.white,
+            size: 40,
+          ),
         ),
         body: SafeArea(
           child: SingleChildScrollView(
@@ -69,8 +74,8 @@ class _EmployeeListState extends State<EmployeeList>
                       Center(
                         child: Text(
                           'Employee',
-                          style:
-                              TextStyle(color: ConstantColor.black3, fontSize: 16),
+                          style: TextStyle(
+                              color: ConstantColor.black3, fontSize: 16),
                         ),
                       ),
                       newformFieldCustom(
