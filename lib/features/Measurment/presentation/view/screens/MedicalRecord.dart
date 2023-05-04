@@ -14,8 +14,7 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
   List<String> _selectedItems = [];
 
   void _showMultiSelect() async {
-    // a list of selectable items
-    // these items can be hard-coded or dynamically fetched from a database/API
+
     final List<String> items = [
       'Blood Pressure',
       'Sugar analysis',
@@ -31,7 +30,7 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
       },
     );
 
-    // Update UI
+
     if (results != null) {
       setState(() {
         _selectedItems = results;
@@ -73,7 +72,7 @@ class _MedicalRecordtextState extends State<MedicalRecordtext> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // use this button to open the multi-select dialog
+
                 Wrap(
                   children: _selectedItems
                       .map((e) => Padding(
