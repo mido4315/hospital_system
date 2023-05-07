@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
               primaryColor: const Color(0xff22C7B8), fontFamily: 'Poppins'),
-          home: AddMeasurement(),
+          home: const SplashView(),
           //const SplashView(),
         ),
       ),
