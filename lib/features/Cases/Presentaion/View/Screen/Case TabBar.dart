@@ -62,13 +62,13 @@ class _CaseTabViewState extends State<CaseTabView>
           ),
           body: Column(
             children: [
-              BlocBuilder<SubjectBloc, SubjectState>(
-                builder: (context, state) {
-                  return Center(
-                    child: Text(''),
-                  );
-                },
-              ),
+              // BlocBuilder<SubjectBloc, SubjectState>(
+              //   builder: (context, state) {
+              //     return Center(
+              //       child: Text(''),
+              //     );
+              //   },
+              // ),
               ListView(
                 children: [
                   const SizedBox(
