@@ -21,8 +21,10 @@ class APIService {
       body: json,
       headers: headers,
     );
-    var responseBody = UserModel.fromJson(jsonDecode(response.body));
-    int? x = responseBody.status;
-    return x;
+    if(response.statusCode == 200){
+      var responseBody = UserModel.fromJson(jsonDecode(response.body));
+      int? x = responseBody.status;
+      return x;
+    }
   }
 }
