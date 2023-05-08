@@ -11,12 +11,15 @@ class PageSize {
 }
 
 class Show {
-  static snackBar(
-      {required BuildContext context, required String content, int? duration}) {
-    return ScaffoldMessenger.of(context).showSnackBar(
+  static void snackBar({
+    required BuildContext context,
+    required String content,
+    int duration = 2,
+  }) {
+    ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(content),
-        duration: Duration(seconds: duration!),
+        duration: Duration(seconds: duration),
       ),
     );
   }

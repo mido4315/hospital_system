@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 import '../../data/api service/apiservice.dart';
+import 'measurement_state.dart';
 
 
 class AttendanceCubit extends Cubit<AttendanceState> {
@@ -24,17 +25,6 @@ class AttendanceCubit extends Cubit<AttendanceState> {
       emit(AttendanceFailure('Failed to connect to the API.'));
     }
   }
-}
-abstract class AttendanceState {}
-
-class AttendanceInitial extends AttendanceState {}
-
-class AttendanceLoading extends AttendanceState {}
-
-class AttendanceSuccess extends AttendanceState {
-  final String message;
-
-  AttendanceSuccess(this.message);
 }
 
 class AttendanceFailure extends AttendanceState {
