@@ -7,8 +7,15 @@ import '../../business_logic/attendance_in_cubit.dart';
 import '../Widgets/ColordContainer.dart';
 import 'TouchID_Sensor_Screen.dart';
 
-class AttendanceandLeaving extends StatelessWidget {
+class AttendanceandLeaving extends StatefulWidget {
   const AttendanceandLeaving({Key? key}) : super(key: key);
+
+  @override
+  State<AttendanceandLeaving> createState() => _AttendanceandLeavingState();
+}
+
+class _AttendanceandLeavingState extends State<AttendanceandLeaving> {
+  DateTime currentTime = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +44,10 @@ class AttendanceandLeaving extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ListTile(
+                   ListTile(
                     title: Text('Attendance'),
                     subtitle: Text(
-                      '09 : 00 am',
+                      '${currentTime.hour}:${currentTime.minute}am',
                       style: TextStyle(color: Color(0xFF22C7B8)),
                     ),
                     trailing: Icon(
@@ -63,6 +70,7 @@ class AttendanceandLeaving extends StatelessWidget {
                           color: Colors.white,
                         ),
                         onPressed: () {
+                          currentTime = DateTime.now();
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) =>
@@ -93,10 +101,10 @@ class AttendanceandLeaving extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const ListTile(
+                       ListTile(
                         title: Text('Leaving'),
                         subtitle: Text(
-                          '04 : 00 pm',
+                          '${currentTime.hour}:${currentTime.minute}am',
                           style: TextStyle(color: Color(0xFF22C7B8)),
                         ),
                         trailing: Icon(
@@ -119,6 +127,7 @@ class AttendanceandLeaving extends StatelessWidget {
                               color: Colors.white,
                             ),
                             onPressed: () {
+                              currentTime = DateTime.now();
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) =>
