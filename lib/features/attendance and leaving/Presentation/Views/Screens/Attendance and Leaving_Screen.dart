@@ -16,6 +16,8 @@ class AttendanceandLeaving extends StatefulWidget {
 
 class _AttendanceandLeavingState extends State<AttendanceandLeaving> {
   DateTime currentTime = DateTime.now();
+  DateTime? attendanceTime;
+  DateTime? leavingTime;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,9 @@ class _AttendanceandLeavingState extends State<AttendanceandLeaving> {
                    ListTile(
                     title: Text('Attendance'),
                     subtitle: Text(
-                      '${currentTime.hour}:${currentTime.minute}am',
+                      attendanceTime != null
+                          ? '${attendanceTime!.hour}:${attendanceTime!.minute}am'
+                          : 'Not recorded',
                       style: TextStyle(color: Color(0xFF22C7B8)),
                     ),
                     trailing: Icon(
@@ -77,6 +81,7 @@ class _AttendanceandLeavingState extends State<AttendanceandLeaving> {
                              TouchIDSensor(
                               onAuthenticationResult: (isAuthenticated ) {
                                 if (isAuthenticated) {
+                                  attendanceTime = currentTime;
                                   BlocProvider.of<AttendanceInCubit>(context).submitAttendance({
                                     'status': 'attendance',
                                   });
@@ -104,7 +109,9 @@ class _AttendanceandLeavingState extends State<AttendanceandLeaving> {
                        ListTile(
                         title: Text('Leaving'),
                         subtitle: Text(
-                          '${currentTime.hour}:${currentTime.minute}am',
+                          leavingTime != null
+                              ? '${leavingTime!.hour}:${leavingTime!.minute}am'
+                              : 'Not recorded',
                           style: TextStyle(color: Color(0xFF22C7B8)),
                         ),
                         trailing: Icon(
@@ -134,6 +141,7 @@ class _AttendanceandLeavingState extends State<AttendanceandLeaving> {
                                     TouchIDSensor(
                                       onAuthenticationResult: (isAuthenticated ) {
                                         if (isAuthenticated) {
+                                          leavingTime = currentTime;
                                           BlocProvider.of<AttendanceInCubit>(context).submitAttendance({
                                             'status': 'leaving',
                                           });
