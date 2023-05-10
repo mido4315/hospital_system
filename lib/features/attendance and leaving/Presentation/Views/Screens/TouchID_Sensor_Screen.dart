@@ -4,8 +4,8 @@ import 'package:local_auth/local_auth.dart';
 
 
 class TouchIDSensor extends StatefulWidget {
-  const TouchIDSensor({Key? key}) : super(key: key);
-
+  const TouchIDSensor({Key? key, required this.onAuthenticationResult}) : super(key: key);
+  final Function(bool) onAuthenticationResult;
   @override
   State<TouchIDSensor> createState() => _TouchIDSensorState();
 }
@@ -26,6 +26,11 @@ class _TouchIDSensorState extends State<TouchIDSensor> with SingleTickerProvider
     showBiometrics = await BiometricHelper().hasEnrolledBiometrics();
     setState(() {});
   }
+  void onAuthenticationResult(bool authenticated) {
+    setState(() {
+      isAuthenticated = authenticated;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +50,7 @@ class _TouchIDSensorState extends State<TouchIDSensor> with SingleTickerProvider
                 });
 
                 bool authenticated = await BiometricHelper().authenticate();
-                setState(() {
-                  isAuthenticated = authenticated;
-                });
+                onAuthenticationResult(authenticated);
               },
 
               child: AnimatedSwitcher(
@@ -84,6 +87,12 @@ class _TouchIDSensorState extends State<TouchIDSensor> with SingleTickerProvider
             const SizedBox(height: 20),
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 500),
+              transitionBuilder: (child, animation) {
+                return ScaleTransition(
+                  scale: animation,
+                  child: child,
+                );
+              },
               child: isAuthenticated
                   ? const Text(
                 'Your attendance has been registered',

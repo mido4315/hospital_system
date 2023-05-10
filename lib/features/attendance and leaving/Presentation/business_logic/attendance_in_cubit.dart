@@ -5,30 +5,18 @@ import '../../data/api service/apiservice.dart';
 import 'measurement_state.dart';
 
 
-class AttendanceCubit extends Cubit<AttendanceState> {
-  final AttendanceService apiService;
+class AttendanceInCubit extends Cubit<MeasurementState> {
+  final AttendanceService _attendanceService;
 
-  AttendanceCubit(this.apiService) : super(AttendanceInitial());
+  AttendanceInCubit(this._attendanceService) : super(MeasurementInitial());
 
   Future<void> submitAttendance(Map<String, dynamic> data) async {
     try {
-      emit(AttendanceLoading());
-
-      final response = await apiService.postAttendance(data);
-
-      if (response.status == 1) {
-        emit(AttendanceSuccess(response.message));
-      } else {
-        emit(AttendanceFailure(response.message));
-      }
+      emit(MeasurementLoading());
+      final response = await _attendanceService.postAttendance(data);
+      emit(MeasurementSuccess(response));
     } catch (e) {
-      emit(AttendanceFailure('Failed to connect to the API.'));
+      emit(MeasurementFailure(e.toString()));
     }
   }
-}
-
-class AttendanceFailure extends AttendanceState {
-  final String errorMessage;
-
-  AttendanceFailure(this.errorMessage);
 }

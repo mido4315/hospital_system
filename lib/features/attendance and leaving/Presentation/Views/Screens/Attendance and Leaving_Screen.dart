@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hospital_system/features/attendance%20and%20leaving/Presentation/Views/Widgets/CustomAppBar.dart';
 
+import '../../../data/api service/apiservice.dart';
+import '../../business_logic/attendance_in_cubit.dart';
 import '../Widgets/ColordContainer.dart';
 import 'TouchID_Sensor_Screen.dart';
 
@@ -9,10 +12,12 @@ class AttendanceandLeaving extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final attendanceCubit = BlocProvider.of<AttendanceCubit>(context);
+
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    return Scaffold(
+    return BlocProvider<AttendanceInCubit>(
+      create: (context) => AttendanceInCubit(AttendanceService()),
+  child: Scaffold(
         backgroundColor: const Color(0xFFF7F7F7),
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 30),
@@ -60,8 +65,17 @@ class AttendanceandLeaving extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const TouchIDSensor()),
+                            MaterialPageRoute(builder: (context) =>
+                             TouchIDSensor(
+                              onAuthenticationResult: (isAuthenticated ) {
+                                if (isAuthenticated) {
+                                  BlocProvider.of<AttendanceInCubit>(context).submitAttendance({
+                                    'status': 'attendance',
+                                  });
+                                }
+                            },)),
                           );
+
                           // attendanceCubit.submitAttendance(data);
                         },
                       ),
@@ -107,7 +121,15 @@ class AttendanceandLeaving extends StatelessWidget {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => const TouchIDSensor()),
+                                MaterialPageRoute(builder: (context) =>
+                                    TouchIDSensor(
+                                      onAuthenticationResult: (isAuthenticated ) {
+                                        if (isAuthenticated) {
+                                          BlocProvider.of<AttendanceInCubit>(context).submitAttendance({
+                                            'status': 'leaving',
+                                          });
+                                        }
+                                      },)),
                               );
                             },
                           ),
@@ -122,6 +144,7 @@ class AttendanceandLeaving extends StatelessWidget {
 
             ],
           ),
-        ));
+        )),
+);
   }
 }

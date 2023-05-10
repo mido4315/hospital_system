@@ -56,10 +56,7 @@ class ContainerBox extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => TouchIDSensor()));
+
                   },
                 ),
               ),

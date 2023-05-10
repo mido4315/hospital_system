@@ -1,11 +1,31 @@
-abstract class AttendanceState {}
+import 'package:equatable/equatable.dart';
 
-class AttendanceInitial extends AttendanceState {}
+import '../../data/model/user_attendance.dart';
+abstract class MeasurementState extends Equatable {
+  const MeasurementState();
 
-class AttendanceLoading extends AttendanceState {}
+  @override
+  List<Object?> get props => [];
+}
 
-class AttendanceSuccess extends AttendanceState {
-  final String message;
+class MeasurementInitial extends MeasurementState {}
 
-  AttendanceSuccess(this.message);
+class MeasurementLoading extends MeasurementState {}
+
+class MeasurementSuccess extends MeasurementState {
+  final Response response;
+
+  MeasurementSuccess(this.response);
+
+  @override
+  List<Object?> get props => [response];
+}
+
+class MeasurementFailure extends MeasurementState {
+  final String error;
+
+  MeasurementFailure(this.error);
+
+  @override
+  List<Object?> get props => [error];
 }
